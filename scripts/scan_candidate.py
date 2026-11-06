@@ -71,7 +71,10 @@ def _walk_files(root):
 
 def _text_for(path):
     if path.suffix.lower() == ".pdf":
-        proc = subprocess.run(["pdftotext", str(path), "-"], capture_output=True, check=False)
+        try:
+            proc = subprocess.run(["pdftotext", str(path), "-"], capture_output=True, check=False)
+        except OSError:
+            return None  # Report unreadable PDF as a review item, never crash scanning.
         if proc.returncode != 0:
             return None
         return proc.stdout.decode("utf-8", "replace")

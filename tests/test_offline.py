@@ -228,6 +228,8 @@ class ScannerTests(unittest.TestCase):
             [sys.executable, str(ROOT / 'scripts/scan_candidate.py'), '--root', str(root), '--output', str(out)],
             capture_output=True, text=True,
         )
+        if not out.is_file():
+            self.fail(f"Candidate scanner produced no report (exit {proc.returncode}).\n{proc.stdout}\n{proc.stderr}")
         return proc, json.loads(out.read_text())
 
     def _init_repo(self, root):
