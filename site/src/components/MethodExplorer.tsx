@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { t, translate, type Locale } from '../i18n';
 import { useQueryState } from './useQueryState';
 
@@ -24,6 +24,8 @@ const methods: Record<Method, { summary: string; access: string; acquisition: st
 
 export function MethodExplorer({ locale = 'en' }: { locale?: Locale }) {
   const [selected, setSelected] = useQueryState<Method>('method', ['Agent','RAG','Pack'], 'Agent');
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
   const tr = (key: Parameters<typeof t>[1]) => t(locale,key);
   const text = (value: string) => translate(locale,value);
   const id = useId();
@@ -42,7 +44,7 @@ export function MethodExplorer({ locale = 'en' }: { locale?: Locale }) {
   ];
 
   return (
-    <section className="method-explorer" aria-labelledby={`${id}-title`}>
+    <section className="method-explorer" data-hydrated={hydrated ? 'true' : undefined} aria-labelledby={`${id}-title`}>
       <p className="eyebrow">{tr('Acquisition policies')}</p>
       <h2 id={`${id}-title`}>{tr('Three ways to acquire repository evidence')}</h2>
       <p className="muted">{tr('Illustrative method definitions using the S1 configuration—not a replay of a real case or a live model run.')}</p>

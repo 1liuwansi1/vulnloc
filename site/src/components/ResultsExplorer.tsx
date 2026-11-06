@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as echarts from 'echarts/core';
 import { BarChart, ScatterChart, CustomChart } from 'echarts/charts';
 import { GridComponent, TooltipComponent, AriaComponent, MarkLineComponent } from 'echarts/components';
@@ -32,6 +32,8 @@ function Chart({ option, label }: { option: EChartsCoreOption; label: string }) 
 export default function ResultsExplorer({ locale = 'en' }: { locale?: Locale }) {
   const [study, setStudy] = useQueryState<Study>('study', ['s0','s1'], 's0');
   const [metric, setMetric] = useQueryState<Metric>('metric', ['file_recall5','line_recall5','failures'], 'file_recall5');
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
   const tr = (key: Parameters<typeof t>[1]) => t(locale,key);
   const pct = (value: number) => number(locale,value * 100) + '%';
   const pp = (value: number) => (value > 0 ? '+' : '') + number(locale,value * 100);
@@ -74,7 +76,7 @@ export default function ResultsExplorer({ locale = 'en' }: { locale?: Locale }) 
       },
     }, { type: 'scatter', data: [], markLine: { silent: true, symbol: 'none', label: { show: false }, lineStyle: { color: '#9dacca', type: 'dashed' }, data: [{ xAxis: 0 }] } }],
   };
-  return <div>
+  return <div data-hydrated={hydrated ? 'true' : undefined}>
     <div className="tabs" aria-label={tr('Select study')}>{(['s0', 's1'] as const).map(s => <button key={s} aria-pressed={study === s} className={study === s ? 'active' : ''} onClick={() => setStudy(s)}>{s.toUpperCase()} · {tr(s === 's0' ? 'Confirmatory' : 'Supplemental')}</button>)}</div>
     <div aria-live="polite"><h2 style={{ fontSize: 30 }}>{tr(study === 's0' ? 'The original confirmatory study' : 'A supplemental study on known entries')}</h2><p>{format(locale,'{entries} entries · {units} inference units · {perArm} per arm · {repeats} repeats averaged within entry',{entries:value.entries,units:value.units,perArm:value.units_per_arm,repeats:value.repeats})}</p></div>
     {study === 's1' && <aside className="note">{tr('S1 is not independent confirmation. Bundled implementation changes and the same known entries prevent a causal interpretation of S0–S1 differences. Agent does not establish a file-recall advantage over RAG.')}</aside>}

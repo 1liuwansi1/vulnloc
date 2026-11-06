@@ -53,6 +53,7 @@ test('results switch: all six arms match scientific JSON', async ({ page }) => {
 
 test('method explorer, mobile navigation, clipboard and FAQ', async ({ page, context }) => {
   await page.goto('/vulnloc/methodology/');
+  await expect(page.locator('[data-hydrated="true"]').first()).toBeVisible();
   await page.getByRole('button', { name: 'RAG', exact: true }).click();
   await expect(page.getByText('RAG: Single-round hybrid retrieval')).toBeVisible();
   await page.getByRole('button', { name: 'Pack', exact: true }).click();

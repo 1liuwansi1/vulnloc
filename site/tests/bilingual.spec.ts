@@ -29,6 +29,7 @@ for (const locale of ['en','zh']) for (const width of [1920,1440,768,390]) {
 
 test('language switch retains page, study, metric, hash and preference',async({page})=>{
   await page.goto('/vulnloc/en/results/');
+  await expect(page.locator('[data-hydrated="true"]').first()).toBeVisible();
   await page.getByRole('button',{name:'S1 · Supplemental'}).click();
   await page.getByRole('button',{name:'LR@5',exact:true}).click();
   await page.evaluate(()=> { location.hash='main'; });
@@ -51,6 +52,7 @@ test('both languages show identical scientific numbers for both studies', async(
   const numbers: Record<string,string[][]> = {};
   for(const locale of ['en','zh']) for(const study of ['s0','s1']) {
     await page.goto(`/vulnloc/${locale}/results/?study=${study}`);
+    await expect(page.locator('[data-hydrated="true"]').first()).toBeVisible();
     await expect(page.locator(`[aria-label="${locale==='en'?'Select study':'选择研究'}"] button`).nth(study==='s0'?0:1)).toHaveAttribute('aria-pressed','true');
     const rows = page.getByTestId('means').locator('tbody tr');
     const actual:string[][]=[];
@@ -99,6 +101,7 @@ test('localized copy feedback and mobile language control',async({page,context})
 
 test('every Chinese method branch and copy-error feedback is localized',async({page})=>{
   await page.goto('/vulnloc/zh/methodology/');
+  await expect(page.locator('[data-hydrated="true"]').first()).toBeVisible();
   for(const [name,title] of [['Agent','只读自适应探索智能体'],['RAG','单轮混合检索'],['Pack','词典序上下文打包']]) {
     await page.getByRole('button',{name,exact:true}).click();
     await expect(page.getByText(`${name}: ${title}`,{exact:true})).toBeVisible();
