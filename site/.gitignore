@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+src/data/verified.json
+test-results/
+playwright-report/
+*.log

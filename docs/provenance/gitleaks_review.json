@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "tool": "Gitleaks 8.16.0 (Ubuntu package)",
+  "scope": "220-file reviewed publication candidate; --no-git; secret values redacted from console",
+  "candidate_manifest_sha256_at_scan": "636c0516b7e626441b7d0e0852f217d98008730a9743e992e87f88545bee08df",
+  "record_added_after_scan": true,
+  "findings_count": 3,
+  "confirmed_credentials": 0,
+  "reviewed": [
+    {
+      "rule": "generic-api-key",
+      "file": "docs/provenance/source_asset_checksums.json",
+      "line": 287,
+      "context": "64-hex SHA256 checksum value in a file-hash catalog",
+      "disposition": "false-positive-sha256"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "experiments/s0_frozen/code/rag_index.py",
+      "line": 33,
+      "context": "64-hex SHA256 of the embedding tokenizer, frozen source constant",
+      "disposition": "false-positive-sha256"
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "experiments/s1_frozen/protocol/embedding_compatibility.json",
+      "line": 6,
+      "context": "64-hex SHA256 of the embedding tokenizer, frozen protocol record",
+      "disposition": "false-positive-sha256"
+    }
+  ],
+  "rule_policy": "Rules were not disabled or narrowly suppressed. Each hit was reviewed in context; no matched value is reproduced in this record.",
+  "limitations": "Secret-pattern screening is not a complete PII, license, PDF-metadata or third-party review. The human publication gate remains open."
+}

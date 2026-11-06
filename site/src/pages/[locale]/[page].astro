@@ -1,0 +1,12 @@
+---
+import Article from '../../views/Article.astro';
+import Results from '../../views/Results.astro';
+import Methodology from '../../views/Methodology.astro';
+import { articlePages } from '../../i18n/content';
+import { locales } from '../../i18n';
+export function getStaticPaths() {
+  return locales.flatMap(locale => [...articlePages,'results','methodology'].map(page => ({ params:{locale,page},props:{locale,page} })));
+}
+const { locale, page } = Astro.props;
+---
+{page === 'results' ? <Results locale={locale} /> : page === 'methodology' ? <Methodology locale={locale} /> : <Article locale={locale} page={page as 'analysis'|'reproducibility'|'paper'|'resources'} />}

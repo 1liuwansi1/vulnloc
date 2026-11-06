@@ -1,0 +1,756 @@
+[
+  {
+    "source": "06_experiments/scripts/c06/analyze_c06_confirmatory.py",
+    "destination": "experiments/s0_frozen/code/analyze_c06_confirmatory.py",
+    "sha256": "ae26fd37c843aa909b25e59c8d588c090d123c076c559c430346ad7ce4a08d99",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/annotate_confirmatory.py",
+    "destination": "experiments/s0_frozen/code/annotate_confirmatory.py",
+    "sha256": "c0c13e8ba0210699220814eef23ddb8dc12280c6462285afb5b3d3b2c52f6a5d",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/arms.py",
+    "destination": "experiments/s0_frozen/code/arms.py",
+    "sha256": "aa4d607c811f2113d5c54980c1b2d48e55f456416fd9fada61ed497e907da6d1",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/check_source_consistency.py",
+    "destination": "experiments/s0_frozen/code/check_source_consistency.py",
+    "sha256": "f38f6c221929cf1f76c6ddc0fb53d90bde092fda920e5110a14c43ee87a89fe6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/commit_identity.py",
+    "destination": "experiments/s0_frozen/code/commit_identity.py",
+    "sha256": "a909c609f79f96b3386c8bd96991e8cafa6d4658849bf147163807c944c171e0",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/common.py",
+    "destination": "experiments/s0_frozen/code/common.py",
+    "sha256": "d176ef4fa30ddb191431ca4df543da22dd32901333c2b1b6504b330b2bf525ec",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/confirmatory_stats.py",
+    "destination": "experiments/s0_frozen/code/confirmatory_stats.py",
+    "sha256": "4a40403f2f033b06cf7b10405e9ced1a2367713dfc27e1d5d36ae98afff65c6e",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/evaluate.py",
+    "destination": "experiments/s0_frozen/code/evaluate.py",
+    "sha256": "16f8c7a6fcef1905ce6e5dcb4889d0ee19b56cdc3f30a583c6cced5a9c494730",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/evaluator_test.py",
+    "destination": "experiments/s0_frozen/code/evaluator_test.py",
+    "sha256": "a49f7706a2375fc5e062b05e4919c94606c5ab63e4e726e1c637bcc668652eeb",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/fake_pi.py",
+    "destination": "experiments/s0_frozen/code/fake_pi.py",
+    "sha256": "0e38244ea26d15a214d3fbd4f07fb7ad4fbdbd434c5e27c6b1543eb0db59af82",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/gen_confirmatory_schedule.py",
+    "destination": "experiments/s0_frozen/code/gen_confirmatory_schedule.py",
+    "sha256": "a9449c488f3ce4cf8ee446e6921bda7f7a2a0e273f41fd9e159e215c92a8d3e3",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/gen_index_integrity_manifest.py",
+    "destination": "experiments/s0_frozen/code/gen_index_integrity_manifest.py",
+    "sha256": "b9dc82c513a249b84c0348a38ae0d6f11861a3370db9895e77de96baa8f33f91",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/gen_launch_manifest.py",
+    "destination": "experiments/s0_frozen/code/gen_launch_manifest.py",
+    "sha256": "0287d6883a96b1958a09d02ff7e649bdfe71e18fa52859b5f1e553ee55b91134",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/mocks.py",
+    "destination": "experiments/s0_frozen/code/mocks.py",
+    "sha256": "732e6edfa3a4f13b8d8bdeca0dc854f45a89ea2594475d805de2d2830a6ea9f8",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/phase_a_analysis.py",
+    "destination": "experiments/s0_frozen/code/phase_a_analysis.py",
+    "sha256": "125d2c8f152e86fed69d2087a00b4e33ab5dd47b9d1c51d5562b2937ee07f5de",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/pi_rpc.py",
+    "destination": "experiments/s0_frozen/code/pi_rpc.py",
+    "sha256": "5a620a31850ea47110ff13f74104a84c168197e4a742643d5214ebae6b61d5b3",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/power_check.py",
+    "destination": "experiments/s0_frozen/code/power_check.py",
+    "sha256": "f91863a2c5a96c262468de8da7f0af640b4c857b8fec513d287d9f43ea029bc7",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/precompute_indexes.py",
+    "destination": "experiments/s0_frozen/code/precompute_indexes.py",
+    "sha256": "f8c3e4a06f523208884efcc5637880e06ed0addea33036208e31f48867be6444",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/rag_index.py",
+    "destination": "experiments/s0_frozen/code/rag_index.py",
+    "sha256": "8e1aaaa5bb142a06303461e471d4f58d5bae81bfdf64814a5ec12f4af7296603",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/runner.py",
+    "destination": "experiments/s0_frozen/code/runner.py",
+    "sha256": "3fb046c258c29663b09a71630d8b480472026aac963fd44310777ad7d77e508d",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/select_confirmatory.py",
+    "destination": "experiments/s0_frozen/code/select_confirmatory.py",
+    "sha256": "8367f534c578e7b8f797327f659ff0eb275412519dc1491801547699965e1257",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/select_samples.py",
+    "destination": "experiments/s0_frozen/code/select_samples.py",
+    "sha256": "fb4591b4cfc42122791147022fee2c834416e44aa61c133578c460daa7c536f0",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_commit_identity.py",
+    "destination": "experiments/s0_frozen/code/test_commit_identity.py",
+    "sha256": "676d1f755ae5e1eae78703e3258b2703f20885bf73919f5db704bb61a05b7759",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_confirmatory_analysis.py",
+    "destination": "experiments/s0_frozen/code/test_confirmatory_analysis.py",
+    "sha256": "dadb74504baffefa73c4b79ee4d566b6d80f6b7e7123d97c9e0a39cf2792a2f3",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_correction_policy.py",
+    "destination": "experiments/s0_frozen/code/test_correction_policy.py",
+    "sha256": "c2328c86294a67a9df1a0f64ee013ef5abb378a5f847f990eefa9e0959ce0bd7",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_entrypoint_integration.py",
+    "destination": "experiments/s0_frozen/code/test_entrypoint_integration.py",
+    "sha256": "fc462ecb0c94aeb5274b43398076ff23bc77723da4d0999a8527256963d0d9eb",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_equivalence_multi.py",
+    "destination": "experiments/s0_frozen/code/test_equivalence_multi.py",
+    "sha256": "7cf45f789d89b0e4b002fda6a78663298bc501259548415ddd6fc1ea18c5eddb",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_index_equivalence.py",
+    "destination": "experiments/s0_frozen/code/test_index_equivalence.py",
+    "sha256": "da74beb4f7a964ad241a113cc1de33096ee19d195dc4963710a80c758e054b26",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_index_exception_boundary.py",
+    "destination": "experiments/s0_frozen/code/test_index_exception_boundary.py",
+    "sha256": "1ecb3a8e6766fd0ebb19eddcc6350b8af5e8176527e12139bd9f302e57b58e05",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_index_fail_closed.py",
+    "destination": "experiments/s0_frozen/code/test_index_fail_closed.py",
+    "sha256": "5f495d25d9234ac87ffc8744e3f79a78029f5b689df1c13f336518d1f28d3fdf",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_pi_rpc_multiturn.py",
+    "destination": "experiments/s0_frozen/code/test_pi_rpc_multiturn.py",
+    "sha256": "2a58d0da92bdc70927d6894aa4ade4f6e6d26bb8a3a14a1fbd4a501d64136813",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_provider_failures.py",
+    "destination": "experiments/s0_frozen/code/test_provider_failures.py",
+    "sha256": "682f7c387d1f1862f77598466690f2fe2971745822474ec8e9d87e6ce0fd57dd",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_rpc_transport.py",
+    "destination": "experiments/s0_frozen/code/test_rpc_transport.py",
+    "sha256": "2584cd40d859594fc10df4423ece03c75230b2e62cc0380666e14a260f6dcdeb",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06/test_stats_frozen.py",
+    "destination": "experiments/s0_frozen/code/test_stats_frozen.py",
+    "sha256": "e9e325746f8224d0224f715221d9b3eccdbd28ca599c5982b9d6036b3b4679ac",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/analysis.py",
+    "destination": "experiments/s1_frozen/code/analysis.py",
+    "sha256": "50b5324ddd2c6cbab5f407419ed752fddc5f043f5492b50182f0e182a379b544",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/billing.py",
+    "destination": "experiments/s1_frozen/code/billing.py",
+    "sha256": "79f234ede6d64ed5308dd6bbecaf987220a263e05fcf7f0d80085e798bd9b5f3",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/core.py",
+    "destination": "experiments/s1_frozen/code/core.py",
+    "sha256": "e6e203a23fef14da0b2bc81558530b17447ecf21dd147fc05098fb6b49693f88",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/index.py",
+    "destination": "experiments/s1_frozen/code/index.py",
+    "sha256": "cf7d932770f189c33f2d3984fc507212680308a0493ed32666235ed3c5e6d146",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/methods.py",
+    "destination": "experiments/s1_frozen/code/methods.py",
+    "sha256": "0bf0e7a45d9fe3b4d2317ebfe120b48b841840df0dc9847ed702322ca1e919a6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/native_bridge.py",
+    "destination": "experiments/s1_frozen/code/native_bridge.py",
+    "sha256": "133cf4622ee0dc30b48ab0aadebb78b7f0ec6315eea9f8a1089e7321dc361c7e",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/native_tools.ts",
+    "destination": "experiments/s1_frozen/code/native_tools.ts",
+    "sha256": "10e9d297e4ea72c9cfefaac896bbc3c689c88d7942162478a966c6afab78b97a",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/preflight.py",
+    "destination": "experiments/s1_frozen/code/preflight.py",
+    "sha256": "391b200f779726b85795f4f42e135c55ec08e963512477b35da69825a9f49b35",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/protocol.py",
+    "destination": "experiments/s1_frozen/code/protocol.py",
+    "sha256": "cedbf0d8112834d33030840ceea4adddd6c9672536b5f2753c3f99893fcab444",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/provider_probe.py",
+    "destination": "experiments/s1_frozen/code/provider_probe.py",
+    "sha256": "bd5a6560d6e7579c8cf32ef220bf3195f0426e8e2531b1396420b6f442d9bf8f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/runner.py",
+    "destination": "experiments/s1_frozen/code/runner.py",
+    "sha256": "ea902c1509b22a7bba31272463299fcb5d2c9e60196ba70c1e18b82b580ae5aa",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/source.py",
+    "destination": "experiments/s1_frozen/code/source.py",
+    "sha256": "8776f9d2f6c0ef2831070b8198c4cb1ed165b61b8724155d4d89bd07f56d73aa",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/test_invariants.py",
+    "destination": "experiments/s1_frozen/code/test_invariants.py",
+    "sha256": "62d5c0de985151b1fb0b88081116c0b05d1288d3816e9f63fcbaab92808d9ae2",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/test_native.py",
+    "destination": "experiments/s1_frozen/code/test_native.py",
+    "sha256": "10a435ca538ee1acea1efe7881eaac56655b3ae59a0252ff34f929bc23e2efce",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/test_repair.py",
+    "destination": "experiments/s1_frozen/code/test_repair.py",
+    "sha256": "3ad5020f84183dfde5081f8a4f2c87021a01145ba63855ed870d241337badda3",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/test_transport.py",
+    "destination": "experiments/s1_frozen/code/test_transport.py",
+    "sha256": "b3eee2e4216cd15f0747f22afbe269599213adda31c4741f82bdb3a3eb9c0a20",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_repair/transport.py",
+    "destination": "experiments/s1_frozen/code/transport.py",
+    "sha256": "658703e90aaad40f630e5c5073837bd1c9d4f78d4b4e6d2a553579b7671f65ca",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/configs/c06-confirmatory.yaml",
+    "destination": "experiments/s0_frozen/configs/c06-confirmatory.yaml",
+    "sha256": "b12bdf879b2bc197b556664b7af319d5cbbc07e33161ff1215215df5969ac0f6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/configs/c06-repair-formal.yaml",
+    "destination": "experiments/s1_frozen/configs/c06-repair-formal.yaml",
+    "sha256": "13faddf195fa90e617dffcfd22abaad48bf7f9573eeb426ee29a785126fd6f71",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/analyze_c06_recovery.py",
+    "destination": "experiments/s1_frozen/recovery/analyze_c06_recovery.py",
+    "sha256": "0cae32409145c6ff2682852f01a7dd89800eeb76a914a84273ec7195b7139f73",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/analyze_c06_recovery_v2.py",
+    "destination": "experiments/s1_frozen/recovery/analyze_c06_recovery_v2.py",
+    "sha256": "cb052d0b0ad97be01849d3aadbfe914aab6b154c74b7563d8fa2c4365eea6a67",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/analyze_c06_recovery_v3.py",
+    "destination": "experiments/s1_frozen/recovery/analyze_c06_recovery_v3.py",
+    "sha256": "e68e08219ff6739477d850e7dc32f4c07addfc71a04d5052e343be82d2845fff",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_recovery.py",
+    "destination": "experiments/s1_frozen/recovery/c06_recovery.py",
+    "sha256": "b94418057c0e9cd95a714aaa80c38789a39a342cc09b933d16b3a637e5efe93b",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_recovery_v2.py",
+    "destination": "experiments/s1_frozen/recovery/c06_recovery_v2.py",
+    "sha256": "467bbec9b83e000b657315ef13a745a1d6ab3eca1659c559b42a29ab3e9e0506",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/c06_recovery_v3.py",
+    "destination": "experiments/s1_frozen/recovery/c06_recovery_v3.py",
+    "sha256": "0597d2ef4ee466ffc7abd81cbbfe35aae10841a86533c503ab3cbf9b2064a275",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/test_c06_recovery.py",
+    "destination": "experiments/s1_frozen/recovery/test_c06_recovery.py",
+    "sha256": "867b397f9034a4a0f8703c4e9440727df6d4936684a0c00e8a26b549d20f8d3f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/test_c06_recovery_v2.py",
+    "destination": "experiments/s1_frozen/recovery/test_c06_recovery_v2.py",
+    "sha256": "ef48bd90ea503aae7aeed4e9367f831df997a6de160bc8242bf8e4c05222158b",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/scripts/test_c06_recovery_v3.py",
+    "destination": "experiments/s1_frozen/recovery/test_c06_recovery_v3.py",
+    "sha256": "a8bff71c005dafa821a13f8b7e274e48e7dea881e60514469cd8f19e461de647",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/statistical_plan.md",
+    "destination": "experiments/s0_frozen/protocol/statistical_plan.md",
+    "sha256": "d3979e42a3a46168877d1d06e2961b57dcaa631a4b46cb52d779a14e670e54d4",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/frozen_claim.md",
+    "destination": "experiments/s0_frozen/protocol/frozen_claim.md",
+    "sha256": "34bf65bc6d9d89549b9db30903fa82415b6a733e89630c3cfb7e3b386a51dcba",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/full_experiment_protocol.md",
+    "destination": "experiments/s0_frozen/protocol/full_experiment_protocol.md",
+    "sha256": "0046040b1b48f944f0b518b9fede95cc348aa8cedbcc87791a97bd0e37dcf175",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/control_contract.md",
+    "destination": "experiments/s0_frozen/protocol/control_contract.md",
+    "sha256": "56de87f32ed0d182fbcbcbcb763d05a581ad6caf683c2b56b878a872fcc7737a",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/retry_policy.md",
+    "destination": "experiments/s0_frozen/protocol/retry_policy.md",
+    "sha256": "301c061ba04f0d47560ce91efba49738d6d4be118a6969bba3d27ecf05127771",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/cost_guard.md",
+    "destination": "experiments/s0_frozen/protocol/cost_guard.md",
+    "sha256": "450bd1f64f9384d5b2e2f1d90106d194d9d003b59e60a69bb243ebbf4e2c94f0",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/latency_protocol.md",
+    "destination": "experiments/s0_frozen/protocol/latency_protocol.md",
+    "sha256": "3da7c59cbd608a025768f7e62368760e58f2e050042632ac30b168f04c061c54",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06/confirmatory_run_schedule.csv",
+    "destination": "data/processed/s0/schedule.csv",
+    "sha256": "aaa11f53d4a793003046a49b816217c96132786821ea64cb856c072f9d04b85b",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "07_results/processed/c06-confirmatory-20261001T141449Z-4dad/stats.json",
+    "destination": "data/processed/s0/official.json",
+    "sha256": "c2dae922f93c1987f1c82a609f79ec5cc33de3250d1cbd568854e791f419030f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "07_results/processed/c06-confirmatory-20261001T141449Z-4dad/provenance.json",
+    "destination": "data/processed/s0/source_provenance.json",
+    "source_sha256": "4831110b70fd76cd9f2035d53ad22d4d7b2d72aab7ce13f9f2a55c28ddc2fb43",
+    "mode": "sanitized-path-derivative"
+  },
+  {
+    "source": "07_results/processed/c06-recovery-v3-formal-20261005T142520Z-56b7/summary.json",
+    "destination": "data/processed/s1/official.json",
+    "sha256": "8186d7497f31410aebc311ddfbfdda5812fe092769d0d46e0430be366e63684f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "07_results/processed/c06-recovery-v3-formal-20261005T142520Z-56b7/per_record.json",
+    "destination": "data/processed/s1/official_per_record.json",
+    "sha256": "85a6f249b80fad076885f62763c3355b72c4faa7be85c5555a4391e8d5001410",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "07_results/processed/c06-recovery-v3-formal-20261005T142520Z-56b7/provenance.json",
+    "destination": "data/processed/s1/source_provenance.json",
+    "source_sha256": "20fa65f2125ce5a151bd434f56afcae11311d0f956de9135bc7c987a65305606",
+    "mode": "sanitized-path-derivative"
+  },
+  {
+    "source": "paper/main.tex",
+    "destination": "paper/main.tex",
+    "sha256": "ca688c891bf3a061a331958f3ccba92d2201bba30e867427cd4a041dfa4b04ad",
+    "mode": "modified-technical-reference",
+    "original_sha256": "a4c138055eb709381486538d996358108ccdd680a83d0da6b815e3abefb5e5fe",
+    "reason": "P2.6 narrowed appendix artifact-reference wording to public-candidate scope; no results or statistical values changed."
+  },
+  {
+    "source": "paper/main.pdf",
+    "destination": "paper/main.pdf",
+    "sha256": "a5047339f93da33d8ca262937d482b8182478b9996e8e43d23758107696e245b",
+    "mode": "modified-technical-reference",
+    "original_sha256": "181f99b3ae3b17855ae6bad34acea91d399d651583259ae7b63f8ee56d646462",
+    "reason": "P2.6 rebuilt PDF from candidate main.tex after narrowing appendix artifact-path wording; no results changed."
+  },
+  {
+    "source": "paper/references.bib",
+    "destination": "paper/references.bib",
+    "sha256": "89162e0bfc12a3e06760735ebf862b2ba5532b77df2db64e6642c3a5101069fc",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/01_introduction.tex",
+    "destination": "paper/sections/01_introduction.tex",
+    "sha256": "58de3c05c6bb67222ba5061b14834ef053a78f4adf8b3b5a89b42addacd363f6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/02_background_related_work.tex",
+    "destination": "paper/sections/02_background_related_work.tex",
+    "sha256": "7c7d473556aecc50fa498e8b7a19a4d23334cff1633e240286628c7114bcd5ac",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/03_methodology.tex",
+    "destination": "paper/sections/03_methodology.tex",
+    "sha256": "aff219e625edc169d216789702f78d6408a58391fef3d0b237b590cc60f5d7b6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/04_experimental_setup.tex",
+    "destination": "paper/sections/04_experimental_setup.tex",
+    "sha256": "4d3cdeae9b35346b0de8d01822df57de6d6f9ac3f0f5db2ac95a67926899361b",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/05_results.tex",
+    "destination": "paper/sections/05_results.tex",
+    "sha256": "9ab3d09ed627bc372a688e4554da2fa52c1f594d24a8ab21886f0f2db4159702",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/06_analysis_discussion.tex",
+    "destination": "paper/sections/06_analysis_discussion.tex",
+    "sha256": "556f15e3bb4d99576c8fe0ee23610eb6cb5a24bc4c93b598997cf18fcbcf4cdd",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/07_threats_to_validity.tex",
+    "destination": "paper/sections/07_threats_to_validity.tex",
+    "sha256": "dba76e2960df17a914b722269615f8d8598c054be14b593260f46367a5072ba6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/sections/08_conclusion.tex",
+    "destination": "paper/sections/08_conclusion.tex",
+    "sha256": "55cce97c8382e0903c837ac72e1e011d8bf9c9951e781a5d09297fdbfc6f3ba6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/cost.tex",
+    "destination": "paper/tables/cost.tex",
+    "sha256": "a313ee8e8c4d27f45cd498f9a89d1bf191bcc643b825d191861a00d7b557e485",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/failures.tex",
+    "destination": "paper/tables/failures.tex",
+    "sha256": "c1c8e4d84dcb30f8d0874ca3c15020b54aff334853edfd0137812a1280d9fb44",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/loco.tex",
+    "destination": "paper/tables/loco.tex",
+    "sha256": "81bfa92426be9ce2a6702df80ca9ac79a0437a539a1670a12ec4285103fdf4ba",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/main_results.tex",
+    "destination": "paper/tables/main_results.tex",
+    "sha256": "6342cd6f9d8b2582bf29820ea0429dbf880bd6e151df4716675671d14863f96f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/negative_results.tex",
+    "destination": "paper/tables/negative_results.tex",
+    "sha256": "4b73e9d2bfccd59ec3616a9108133c1eadd1ae815512de67a3793a2598468f1d",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/offline.tex",
+    "destination": "paper/tables/offline.tex",
+    "sha256": "814e33b618a3f45dedc98eec8cd8dc17fb6513920b911d6af3a19ae5e9b61cb7",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/primary.tex",
+    "destination": "paper/tables/primary.tex",
+    "sha256": "2980a6d582cf40543c967a2fa5894e6bc1a647fa8ba9847fb902eaaa48828a4c",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/prompts.tex",
+    "destination": "paper/tables/prompts.tex",
+    "sha256": "0eed1b81fc7828ec3147cf68fd421b6efce27a3c7be32b0e2013f987a1d5b026",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_annotation_stages.tex",
+    "destination": "paper/tables/revision_annotation_stages.tex",
+    "sha256": "7ec31a60ec585c0071160e747749e4605979fc0cc0e28ac0cd57ee339c851945",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_cluster_sensitivity.tex",
+    "destination": "paper/tables/revision_cluster_sensitivity.tex",
+    "sha256": "67296d16cab8d53b1df74dbf7720f3f86d45133ce2139fa81775ebe47fbad275",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_completion.tex",
+    "destination": "paper/tables/revision_completion.tex",
+    "sha256": "2df420932e2568cfe42b9abc48983cf7877979d73675fb97a7f5d35addedd6e1",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_configuration_changes.tex",
+    "destination": "paper/tables/revision_configuration_changes.tex",
+    "sha256": "d7080e64644a1b5b926279cbcfbb363cc9e8f30151f9743a48c8e5e484162fe1",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_contrasts.tex",
+    "destination": "paper/tables/revision_contrasts.tex",
+    "sha256": "9054f98868cc42801dbd80fd35a1866c6fbb49c5e0e673cc5080402df2b9f0b9",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_delivery.tex",
+    "destination": "paper/tables/revision_delivery.tex",
+    "sha256": "b4a8dc814975d4b072611f834052dacb9ad13c56149a0a48ea83b5ed357bd244",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_hint_subgroups.tex",
+    "destination": "paper/tables/revision_hint_subgroups.tex",
+    "sha256": "0210241117fc0d823dfb3e696c96ec588fc00300bff7fec0b33cb6184fcd3b95",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_input_hints.tex",
+    "destination": "paper/tables/revision_input_hints.tex",
+    "sha256": "260091cecf2bf9c9735f0835ed48749b1eca13621beac8b52e4d18a826651567",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_interval_detail.tex",
+    "destination": "paper/tables/revision_interval_detail.tex",
+    "sha256": "3f12aee36cab34bf7c683f68bb278cdd745a614436e26af13ea25d77b8d5af3e",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_literature_comparison.tex",
+    "destination": "paper/tables/revision_literature_comparison.tex",
+    "sha256": "cfbf694a49ffa03d79d7d1ec2c94bdae4698f5cf5b16b6a11794c6b4432fbc02",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_location_validity.tex",
+    "destination": "paper/tables/revision_location_validity.tex",
+    "sha256": "d67d05077b07e5a3091c3fb5bc2226870974c46f1bb5f8dd56119925e6253df6",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_means.tex",
+    "destination": "paper/tables/revision_means.tex",
+    "sha256": "4d9263a6cddb7857f9d9f1e3c33bca7e0d40a5c3fd7cd0fdbea4021082a03729",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_numbers.tex",
+    "destination": "paper/tables/revision_numbers.tex",
+    "sha256": "86b91429df7c0fd914d542228372cd037b585a46d05ca84bacb8a5369dee19e7",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_overview.tex",
+    "destination": "paper/tables/revision_overview.tex",
+    "sha256": "d9ee7a5cbd38bd727c9b9a61a86784905643b50cc73673f35756806d2d04e54e",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_repositories.tex",
+    "destination": "paper/tables/revision_repositories.tex",
+    "sha256": "b3b895aad1ee4a6fc58c71feb5a7482ee226a29ddd09c1bd9789f6c51a13c79b",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_resources.tex",
+    "destination": "paper/tables/revision_resources.tex",
+    "sha256": "69479632eb21dafe4fb497dccf3a0d3ef3f2d44aaa1a247843924efdbdf37c1b",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/revision_role_width.tex",
+    "destination": "paper/tables/revision_role_width.tex",
+    "sha256": "c0de81ee8572c0ef714520e6607f5f797884aca01ac8522f1cf83a349c243358",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/robustness.tex",
+    "destination": "paper/tables/robustness.tex",
+    "sha256": "e8b20c5ec0ce96d7d1cd642e76a481c7f7e31782653c77dcf3ba3aa66694edda",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/secondary.tex",
+    "destination": "paper/tables/secondary.tex",
+    "sha256": "4e35995157a2a17314205c42bbab961640a1a65ba4abf40b4386b6a9c87570d3",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/tables/source_extensions.tex",
+    "destination": "paper/tables/source_extensions.tex",
+    "sha256": "7e75b013a6b4a79b1867c4a413d1e9ee8974c45939a1fc96cece261c1242d22a",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/acquisition_design.tex",
+    "destination": "paper/figures/acquisition_design.tex",
+    "sha256": "a11a26eecf106c5bba8fe29194dd67b529d7d26e046b4f3a3fed4738a074c03f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/s1_contrasts.tex",
+    "destination": "paper/figures/s1_contrasts.tex",
+    "sha256": "c72366685610cab61fb8cadd76d8490af506b7a067bafa7a9f257e0940a48c3c",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/s1_delivery_output.tex",
+    "destination": "paper/figures/s1_delivery_output.tex",
+    "sha256": "d0f372c41294e11e1fda4f27af1439f6a3c14a21617f0adc28fb41c45b3980d8",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/s1_input.tex",
+    "destination": "paper/figures/s1_input.tex",
+    "sha256": "f80cd1ff7db1e8eb6505b29d03b08a8f485b684978c95361c66b0dca4fb0d520",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/acquisition_design.pdf",
+    "destination": "paper/figures/acquisition_design.pdf",
+    "sha256": "dcfda00a4b7131c47088b3eeff1e602344664395017fc33f2704e7cce1b4dcd7",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/s1_contrasts.pdf",
+    "destination": "paper/figures/s1_contrasts.pdf",
+    "sha256": "4b993a8c7f075519f508b5ebb20b8a7cc026916bd98d14da9b2871689a767e5f",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/s1_delivery_output.pdf",
+    "destination": "paper/figures/s1_delivery_output.pdf",
+    "sha256": "2c149fc0249e534b4b6a09604a84ca7d4d37a971231197bc751e323d72059066",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/figures/s1_input.pdf",
+    "destination": "paper/figures/s1_input.pdf",
+    "sha256": "017e1ec689fdb8c6baf686eb5251a83b83293a0aa1d4332fdef7bf5b5c6d44fc",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "paper/paper_zh.md",
+    "destination": "paper/paper_zh.md",
+    "source_sha256": "575863e98ce2d21bab134b47f2b4a3382167356963d435801a7eb0317998b5fd",
+    "mode": "relative-link-derivative"
+  },
+  {
+    "source": "06_experiments/c06_repair/source_policy.json",
+    "destination": "experiments/s1_frozen/protocol/source_policy.json",
+    "sha256": "f80ecdd4160f56eb2557d9934a1209bca9287c73ea639c5e0ca9472e1d799996",
+    "mode": "byte-identical"
+  },
+  {
+    "source": "06_experiments/c06_repair/embedding_compatibility.json",
+    "destination": "experiments/s1_frozen/protocol/embedding_compatibility.json",
+    "sha256": "4b8c925c87165027e22754e3b07e68f79b5b00181ae4f034b1a2a39474e78336",
+    "mode": "byte-identical"
+  }
+]

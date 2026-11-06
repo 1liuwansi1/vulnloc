@@ -1,0 +1,32 @@
+Metrics-only data, aggregate results, and manuscript/figures
+Copyright 2026 The vulnloc authors
+
+The material identified in `LICENSING.md` as data/manuscript/figures is licensed
+under the Creative Commons Attribution 4.0 International License (CC BY 4.0):
+
+  https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt the material for any purpose, provided you give
+appropriate credit, provide a link to the license, and indicate if changes were
+made. No additional restrictions may be applied that legally prevent others
+from doing what the license permits.
+
+Suggested attribution:
+
+  vulnloc research artifact, The vulnloc authors (individual author list
+  pending), 2026. Derived in part from VulnGym v0.1.4 (CC BY 4.0).
+
+Scope and exclusions:
+
+- This notice covers `data/processed/`, `results/`, the S0 Top-5 audit results,
+  and the manuscript text, tables, figures and compiled PDF in `paper/`.
+- It does not relicense third-party repository source, advisory titles or
+  descriptions, model inputs/outputs, embeddings, indexes, or other excluded
+  material. Those are not distributed in the candidate.
+- Upstream VulnGym v0.1.4 is distributed under CC BY 4.0. This project's
+  derivative metadata retains that attribution; it does not relicense any
+  third-party repository.
+- The Apache-2.0 license in `LICENSE` covers software and executable code, not
+  this data/manuscript material.
+- Individual author names, affiliation, venue and DOI remain pending; do not
+  infer them from this notice.

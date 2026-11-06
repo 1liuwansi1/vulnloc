@@ -1,0 +1,371 @@
+{
+  "run_id": "c06-confirmatory-20261001T141449Z-4dad",
+  "stats": {
+    "primary": {
+      "agent_vs_pack": {
+        "n": 80,
+        "mean": 0.4188,
+        "bootstrap_ci95": [
+          0.3333,
+          0.5062
+        ],
+        "cohens_dz": 1.0527,
+        "permutation_p": 0.0,
+        "wilcoxon_p": 0.0
+      },
+      "arm_means_fr": {
+        "agent": 0.8458,
+        "rag": 0.7875,
+        "pack": 0.4271
+      }
+    },
+    "secondary": {
+      "fr_agent_vs_rag": {
+        "n": 80,
+        "mean": 0.0583,
+        "bootstrap_ci95": [
+          0.0042,
+          0.1146
+        ],
+        "cohens_dz": 0.228,
+        "permutation_p": 0.0529,
+        "wilcoxon_p": 0.0381
+      },
+      "fr_rag_vs_pack": {
+        "n": 80,
+        "mean": 0.3604,
+        "bootstrap_ci95": [
+          0.2812,
+          0.4417
+        ],
+        "cohens_dz": 0.9648,
+        "permutation_p": 0.0,
+        "wilcoxon_p": 0.0
+      },
+      "lr_agent_vs_rag": {
+        "n": 80,
+        "mean": 0.1667,
+        "bootstrap_ci95": [
+          0.0917,
+          0.2417
+        ],
+        "cohens_dz": 0.4893,
+        "permutation_p": 0.0001,
+        "wilcoxon_p": 0.0001
+      },
+      "lr_rag_vs_pack": {
+        "n": 80,
+        "mean": 0.2542,
+        "bootstrap_ci95": [
+          0.1625,
+          0.3438
+        ],
+        "cohens_dz": 0.6136,
+        "permutation_p": 0.0,
+        "wilcoxon_p": 0.0
+      },
+      "arm_means_lr": {
+        "agent": 0.6583,
+        "rag": 0.4917,
+        "pack": 0.2375
+      },
+      "bh_fdr_qvalues": {
+        "fr_agent_vs_rag": 0.0529,
+        "fr_rag_vs_pack": 0.0,
+        "lr_agent_vs_rag": 0.00013333333333333334,
+        "lr_rag_vs_pack": 0.0
+      },
+      "bh_family_members": [
+        "fr_agent_vs_rag",
+        "fr_rag_vs_pack",
+        "lr_agent_vs_rag",
+        "lr_rag_vs_pack"
+      ]
+    },
+    "subgroups": {
+      "PATH_HINT": {
+        "n": 29,
+        "agent_vs_pack": {
+          "mean": 0.1782,
+          "bootstrap_ci95": [
+            0.069,
+            0.2989
+          ],
+          "permutation_p": 0.006
+        },
+        "arm_means_fr": {
+          "agent": 0.8793,
+          "rag": 0.8851,
+          "pack": 0.7011
+        }
+      },
+      "NO_PATH_HINT": {
+        "n": 51,
+        "agent_vs_pack": {
+          "mean": 0.5556,
+          "bootstrap_ci95": [
+            0.4542,
+            0.6569
+          ],
+          "permutation_p": 0.0
+        },
+        "arm_means_fr": {
+          "agent": 0.8268,
+          "rag": 0.732,
+          "pack": 0.2712
+        }
+      }
+    },
+    "cluster_sensitivity": {
+      "dominant_cluster": "https://github.com/openclaw/openclaw",
+      "dominant_n": 45,
+      "n_clusters": 13,
+      "leave_dominant_out_n": 35,
+      "leave_dominant_out_agent_vs_pack": {
+        "mean": 0.3952,
+        "bootstrap_ci95": [
+          0.2714,
+          0.5143
+        ],
+        "permutation_p": 0.0
+      },
+      "leave_one_out": {
+        "https://github.com/openclaw/openclaw": {
+          "n": 35,
+          "mean": 0.3952,
+          "bootstrap_ci95": [
+            0.2714,
+            0.5143
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/n8n-io/n8n": {
+          "n": 68,
+          "mean": 0.4216,
+          "bootstrap_ci95": [
+            0.326,
+            0.5196
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/flowiseai/flowise": {
+          "n": 72,
+          "mean": 0.4028,
+          "bootstrap_ci95": [
+            0.3102,
+            0.4954
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/paperclipai/paperclip": {
+          "n": 77,
+          "mean": 0.4264,
+          "bootstrap_ci95": [
+            0.3398,
+            0.5152
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/mlflow/mlflow": {
+          "n": 78,
+          "mean": 0.4167,
+          "bootstrap_ci95": [
+            0.3291,
+            0.5064
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/apache/airflow": {
+          "n": 78,
+          "mean": 0.4124,
+          "bootstrap_ci95": [
+            0.3248,
+            0.5021
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/langflow-ai/langflow": {
+          "n": 78,
+          "mean": 0.4274,
+          "bootstrap_ci95": [
+            0.3419,
+            0.5171
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/milvus-io/milvus": {
+          "n": 79,
+          "mean": 0.4241,
+          "bootstrap_ci95": [
+            0.3376,
+            0.5105
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/tencent/weknora": {
+          "n": 79,
+          "mean": 0.4241,
+          "bootstrap_ci95": [
+            0.3376,
+            0.5105
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/nvidia/nemo": {
+          "n": 79,
+          "mean": 0.4177,
+          "bootstrap_ci95": [
+            0.3291,
+            0.5063
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/open-webui/open-webui": {
+          "n": 79,
+          "mean": 0.4241,
+          "bootstrap_ci95": [
+            0.3354,
+            0.5105
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/berriai/litellm": {
+          "n": 79,
+          "mean": 0.4262,
+          "bootstrap_ci95": [
+            0.3376,
+            0.5127
+          ],
+          "permutation_p": 0.0
+        },
+        "https://github.com/czlonkowski/n8n-mcp": {
+          "n": 79,
+          "mean": 0.4114,
+          "bootstrap_ci95": [
+            0.3249,
+            0.4979
+          ],
+          "permutation_p": 0.0
+        }
+      },
+      "cluster_level_aggregation": {
+        "https://github.com/mlflow/mlflow": {
+          "agent": 1.0,
+          "rag": 0.75,
+          "pack": 0.5
+        },
+        "https://github.com/n8n-io/n8n": {
+          "agent": 0.7778,
+          "rag": 0.8194,
+          "pack": 0.375
+        },
+        "https://github.com/openclaw/openclaw": {
+          "agent": 0.8444,
+          "rag": 0.7667,
+          "pack": 0.4074
+        },
+        "https://github.com/milvus-io/milvus": {
+          "agent": 1.0,
+          "rag": 1.0,
+          "pack": 1.0
+        },
+        "https://github.com/flowiseai/flowise": {
+          "agent": 0.8542,
+          "rag": 0.75,
+          "pack": 0.2917
+        },
+        "https://github.com/tencent/weknora": {
+          "agent": 1.0,
+          "rag": 1.0,
+          "pack": 1.0
+        },
+        "https://github.com/apache/airflow": {
+          "agent": 1.0,
+          "rag": 1.0,
+          "pack": 0.3333
+        },
+        "https://github.com/langflow-ai/langflow": {
+          "agent": 1.0,
+          "rag": 1.0,
+          "pack": 0.9167
+        },
+        "https://github.com/nvidia/nemo": {
+          "agent": 0.5,
+          "rag": 0.0,
+          "pack": 0.0
+        },
+        "https://github.com/open-webui/open-webui": {
+          "agent": 1.0,
+          "rag": 1.0,
+          "pack": 1.0
+        },
+        "https://github.com/berriai/litellm": {
+          "agent": 0.3333,
+          "rag": 0.5,
+          "pack": 0.5
+        },
+        "https://github.com/paperclipai/paperclip": {
+          "agent": 0.8889,
+          "rag": 0.8889,
+          "pack": 0.6667
+        },
+        "https://github.com/czlonkowski/n8n-mcp": {
+          "agent": 1.0,
+          "rag": 1.0,
+          "pack": 0.0
+        }
+      },
+      "cluster_sizes": {
+        "https://github.com/openclaw/openclaw": 45,
+        "https://github.com/n8n-io/n8n": 12,
+        "https://github.com/flowiseai/flowise": 8,
+        "https://github.com/paperclipai/paperclip": 3,
+        "https://github.com/mlflow/mlflow": 2,
+        "https://github.com/apache/airflow": 2,
+        "https://github.com/langflow-ai/langflow": 2,
+        "https://github.com/milvus-io/milvus": 1,
+        "https://github.com/tencent/weknora": 1,
+        "https://github.com/nvidia/nemo": 1,
+        "https://github.com/open-webui/open-webui": 1,
+        "https://github.com/berriai/litellm": 1,
+        "https://github.com/czlonkowski/n8n-mcp": 1
+      }
+    },
+    "repeat_stability": {
+      "mean_abs_diff": 0.1021,
+      "median_abs_diff": 0.0,
+      "n_cells": 240
+    },
+    "cost_latency": {
+      "agent": {
+        "cost_mean": 0.068175,
+        "latency_mean_s": 88.1
+      },
+      "rag": {
+        "cost_mean": 0.053428,
+        "latency_mean_s": 63.1
+      },
+      "pack": {
+        "cost_mean": 0.051328,
+        "latency_mean_s": 57.1
+      }
+    },
+    "invalid_path": {
+      "pack": {
+        "bad": 453,
+        "total": 842,
+        "rate": 0.538
+      },
+      "agent": {
+        "bad": 0,
+        "total": 997,
+        "rate": 0.0
+      },
+      "rag": {
+        "bad": 16,
+        "total": 912,
+        "rate": 0.0175
+      }
+    }
+  }
+}

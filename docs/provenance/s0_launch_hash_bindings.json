@@ -1,0 +1,110 @@
+{
+  "experiment_config": {
+    "source": "06_experiments/configs/c06-confirmatory.yaml",
+    "expected_normalized_sha256": "b12bdf879b2bc197b556664b7af319d5cbbc07e33161ff1215215df5969ac0f6",
+    "supplied_copy": "experiments/s0_frozen/configs/c06-confirmatory.yaml",
+    "status": "supplied"
+  },
+  "sample_manifest": {
+    "source": "06_experiments/c06/confirmatory_sample_manifest.csv",
+    "expected_normalized_sha256": "74f168f29b902ef75cc3c70f60a08fe9262578798b342b4c228890cd53d3fc50",
+    "supplied_copy": null,
+    "status": "withheld; packaging-time source hash verified"
+  },
+  "run_schedule": {
+    "source": "06_experiments/c06/confirmatory_run_schedule.csv",
+    "expected_normalized_sha256": "885a20d61dc2f86304e5221b078baed1309240be795f8ab2bbce66e890ad3602",
+    "supplied_copy": "data/processed/s0/schedule.csv",
+    "status": "supplied"
+  },
+  "path_hint_annotation": {
+    "source": "06_experiments/c06/confirmatory_annotation_manifest.json",
+    "expected_normalized_sha256": "1e87afcdd0ec2039a42917164fa87594b2846f614a6b62082924566f11f12ba5",
+    "supplied_copy": null,
+    "status": "withheld; packaging-time source hash verified"
+  },
+  "index_manifest": {
+    "source": "06_experiments/c06/confirmatory_index_manifest.json",
+    "expected_normalized_sha256": "7586c97175b08f21fe1df607c7371e4d4c61a08503f93a3f0aae038a19ed577d",
+    "supplied_copy": null,
+    "status": "withheld; packaging-time source hash verified"
+  },
+  "index_manifest_sha256_file": {
+    "source": "06_experiments/c06/confirmatory_index_manifest.json.sha256",
+    "expected_normalized_sha256": "8ffbdb0972e72816d5295604c6ce204e7b865b00786878a6e2cca07d8aa71526",
+    "supplied_copy": null,
+    "status": "withheld; packaging-time source hash verified"
+  },
+  "evaluator": {
+    "source": "06_experiments/scripts/c06/evaluate.py",
+    "expected_normalized_sha256": "16f8c7a6fcef1905ce6e5dcb4889d0ee19b56cdc3f30a583c6cced5a9c494730",
+    "supplied_copy": "experiments/s0_frozen/code/evaluate.py",
+    "status": "supplied"
+  },
+  "common": {
+    "source": "06_experiments/scripts/c06/common.py",
+    "expected_normalized_sha256": "d176ef4fa30ddb191431ca4df543da22dd32901333c2b1b6504b330b2bf525ec",
+    "supplied_copy": "experiments/s0_frozen/code/common.py",
+    "status": "supplied"
+  },
+  "arms": {
+    "source": "06_experiments/scripts/c06/arms.py",
+    "expected_normalized_sha256": "aa4d607c811f2113d5c54980c1b2d48e55f456416fd9fada61ed497e907da6d1",
+    "supplied_copy": "experiments/s0_frozen/code/arms.py",
+    "status": "supplied"
+  },
+  "pi_rpc": {
+    "source": "06_experiments/scripts/c06/pi_rpc.py",
+    "expected_normalized_sha256": "5a620a31850ea47110ff13f74104a84c168197e4a742643d5214ebae6b61d5b3",
+    "supplied_copy": "experiments/s0_frozen/code/pi_rpc.py",
+    "status": "supplied"
+  },
+  "runner": {
+    "source": "06_experiments/scripts/c06/runner.py",
+    "expected_normalized_sha256": "3fb046c258c29663b09a71630d8b480472026aac963fd44310777ad7d77e508d",
+    "supplied_copy": "experiments/s0_frozen/code/runner.py",
+    "status": "supplied"
+  },
+  "rag_index": {
+    "source": "06_experiments/scripts/c06/rag_index.py",
+    "expected_normalized_sha256": "8e1aaaa5bb142a06303461e471d4f58d5bae81bfdf64814a5ec12f4af7296603",
+    "supplied_copy": "experiments/s0_frozen/code/rag_index.py",
+    "status": "supplied"
+  },
+  "analysis_entrypoint": {
+    "source": "06_experiments/scripts/c06/analyze_c06_confirmatory.py",
+    "expected_normalized_sha256": "ae26fd37c843aa909b25e59c8d588c090d123c076c559c430346ad7ce4a08d99",
+    "supplied_copy": "experiments/s0_frozen/code/analyze_c06_confirmatory.py",
+    "status": "supplied"
+  },
+  "stats": {
+    "source": "06_experiments/scripts/c06/confirmatory_stats.py",
+    "expected_normalized_sha256": "4a40403f2f033b06cf7b10405e9ced1a2367713dfc27e1d5d36ae98afff65c6e",
+    "supplied_copy": "experiments/s0_frozen/code/confirmatory_stats.py",
+    "status": "supplied"
+  },
+  "retry_policy": {
+    "source": "06_experiments/c06/retry_policy.md",
+    "expected_normalized_sha256": "301c061ba04f0d47560ce91efba49738d6d4be118a6969bba3d27ecf05127771",
+    "supplied_copy": "experiments/s0_frozen/protocol/retry_policy.md",
+    "status": "supplied"
+  },
+  "statistical_plan": {
+    "source": "06_experiments/c06/statistical_plan.md",
+    "expected_normalized_sha256": "d3979e42a3a46168877d1d06e2961b57dcaa631a4b46cb52d779a14e670e54d4",
+    "supplied_copy": "experiments/s0_frozen/protocol/statistical_plan.md",
+    "status": "supplied"
+  },
+  "cost_guard": {
+    "source": "06_experiments/c06/cost_guard.md",
+    "expected_normalized_sha256": "450bd1f64f9384d5b2e2f1d90106d194d9d003b59e60a69bb243ebbf4e2c94f0",
+    "supplied_copy": "experiments/s0_frozen/protocol/cost_guard.md",
+    "status": "supplied"
+  },
+  "frozen_claim": {
+    "source": "06_experiments/c06/frozen_claim.md",
+    "expected_normalized_sha256": "34bf65bc6d9d89549b9db30903fa82415b6a733e89630c3cfb7e3b386a51dcba",
+    "supplied_copy": "experiments/s0_frozen/protocol/frozen_claim.md",
+    "status": "supplied"
+  }
+}

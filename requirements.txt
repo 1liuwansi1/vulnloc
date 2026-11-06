@@ -1,0 +1,2 @@
+# Historical numerical runtime; required for S1 RNG compatibility.
+numpy==2.5.3

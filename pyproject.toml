@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vulnloc"
+version = "0.1.0"
+description = "Offline reproduction of repository-level vulnerability localization studies"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["numpy==2.5.3"]
+classifiers = ["Private :: Do Not Upload"]
+
+[project.scripts]
+vulnloc = "vulnloc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

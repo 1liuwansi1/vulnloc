@@ -1,0 +1,114 @@
+{
+  "study": "s0",
+  "entries": 80,
+  "units": 720,
+  "arms": {
+    "agent": {
+      "file_recall5": 0.8458333333333334,
+      "line_recall5": 0.6583333333333333,
+      "failures": 6,
+      "units": 240
+    },
+    "rag": {
+      "file_recall5": 0.7875,
+      "line_recall5": 0.4916666666666667,
+      "failures": 0,
+      "units": 240
+    },
+    "pack": {
+      "file_recall5": 0.4270833333333333,
+      "line_recall5": 0.2375,
+      "failures": 0,
+      "units": 240
+    }
+  },
+  "primary": {
+    "n": 80,
+    "mean": 0.4188,
+    "bootstrap_ci95": [
+      0.3333,
+      0.5062
+    ],
+    "cohens_dz": 1.0527,
+    "permutation_p": 0.0,
+    "wilcoxon_p": 0.0
+  },
+  "secondary": {
+    "fr_agent_vs_rag": {
+      "n": 80,
+      "mean": 0.0583,
+      "bootstrap_ci95": [
+        0.0042,
+        0.1146
+      ],
+      "cohens_dz": 0.228,
+      "permutation_p": 0.0529,
+      "wilcoxon_p": 0.0381,
+      "bh_q": 0.0529
+    },
+    "fr_rag_vs_pack": {
+      "n": 80,
+      "mean": 0.3604,
+      "bootstrap_ci95": [
+        0.2812,
+        0.4417
+      ],
+      "cohens_dz": 0.9648,
+      "permutation_p": 0.0,
+      "wilcoxon_p": 0.0,
+      "bh_q": 0.0
+    },
+    "lr_agent_vs_rag": {
+      "n": 80,
+      "mean": 0.1667,
+      "bootstrap_ci95": [
+        0.0917,
+        0.2417
+      ],
+      "cohens_dz": 0.4893,
+      "permutation_p": 0.0001,
+      "wilcoxon_p": 0.0001,
+      "bh_q": 0.00013333333333333334
+    },
+    "lr_rag_vs_pack": {
+      "n": 80,
+      "mean": 0.2542,
+      "bootstrap_ci95": [
+        0.1625,
+        0.3438
+      ],
+      "cohens_dz": 0.6136,
+      "permutation_p": 0.0,
+      "wilcoxon_p": 0.0,
+      "bh_q": 0.0
+    }
+  },
+  "seed": 20260928,
+  "bootstrap_draws": 10000,
+  "permutation_draws": 100000,
+  "official_and_paper_checks": "PASS",
+  "scope": "L1 score aggregation; not raw answer re-scoring or model collection",
+  "provenance": {
+    "scope": "engineering-derived L1 provenance for the public candidate; not a historical raw provenance record",
+    "inputs_sha256": {
+      "data/processed/entries.json": "9116e49b63d9b1257228eda1cb06ac14d875f2a7728ba9665e3334aa1286f477",
+      "data/processed/s0/metrics.json": "5c7506bea155f17f732e6a3f1bbe8bb07329be1be50d8c701b3aa1996194585e",
+      "data/processed/s0/official.json": "c2dae922f93c1987f1c82a609f79ec5cc33de3250d1cbd568854e791f419030f",
+      "data/processed/s0/schedule.csv": "aaa11f53d4a793003046a49b816217c96132786821ea64cb856c072f9d04b85b",
+      "data/processed/s0/source_provenance.json": "e24094f62e63d1a124fef19b45afe2ad9e61baf02b8ab8e12dddfd016f709006",
+      "docs/METHODS.md": "d6519fe49850dab8b3f4542d5e19a4c9ed15ccd1b29477a16d2032b4348ee4be",
+      "experiments/s0_frozen/code/confirmatory_stats.py": "4a40403f2f033b06cf7b10405e9ced1a2367713dfc27e1d5d36ae98afff65c6e",
+      "paper/tables/revision_contrasts.tex": "9054f98868cc42801dbd80fd35a1866c6fbb49c5e0e673cc5080402df2b9f0b9",
+      "paper/tables/revision_means.tex": "4d9263a6cddb7857f9d9f1e3c33bca7e0d40a5c3fd7cd0fdbea4021082a03729",
+      "paper/tables/revision_numbers.tex": "86b91429df7c0fd914d542228372cd037b585a46d05ca84bacb8a5369dee19e7",
+      "requirements.txt": "6d8010d6b7c5291f00df55a9b8c4a25de7d8c88d5b6bd36ddf2bbdc16110cbb7"
+    },
+    "environment": {
+      "python": "3.12.3",
+      "numpy": "2.5.3",
+      "analysis_seed": 20260928,
+      "bootstrap_draws": 10000,
+      "permutation_draws": 100000
+    }
+  }
+}

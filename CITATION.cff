@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Author list, affiliation, venue and DOI remain pending. Cite the repository URL until final scholarly metadata is approved; do not invent attribution."
+type: software
+title: "vulnloc: Repository-Level Vulnerability Localization Research Artifact"
+version: 0.1.0
+authors:
+  - name: "The vulnloc authors (individual attribution pending)"
+repository-code: "https://github.com/1liuwansi1/vulnloc"
+url: "https://1liuwansi1.github.io/vulnloc/"
+license: Apache-2.0
+license-url: "https://www.apache.org/licenses/LICENSE-2.0"
+abstract: "Offline L1 reproduction and bilingual research website for S0 and the same-known-sample supplemental study S1. Source code is Apache-2.0; metrics-only data, manuscript and figures are CC BY 4.0. Authors, affiliation, venue and DOI are pending."
+keywords:
+  - vulnerability localization
+  - repository-level analysis
+  - context acquisition
+  - retrieval-augmented generation
+  - research artifact

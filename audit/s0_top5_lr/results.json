@@ -1,0 +1,64 @@
+{
+  "audit": "S0 LR Top-5 sensitivity",
+  "source_run": "c06-confirmatory-20261001T141449Z-4dad",
+  "scope": "read-only raw verification; no model calls",
+  "records": 720,
+  "raw_candidate_lengths": {
+    "1": 87,
+    "2": 89,
+    "3": 58,
+    "4": 88,
+    "5": 392,
+    "None": 6
+  },
+  "parsed_candidate_lengths": {
+    "0": 6,
+    "1": 87,
+    "2": 89,
+    "3": 58,
+    "4": 88,
+    "5": 392
+  },
+  "raw_records_over_5": 0,
+  "parsed_records_over_5": 0,
+  "affected_record_count": 0,
+  "affected_records": [],
+  "max_abs_record_difference": 0.0,
+  "original": {
+    "agent": {
+      "entries": 80,
+      "repeats_per_entry": 3,
+      "line_recall5_mean": 0.6583333333333333
+    },
+    "rag": {
+      "entries": 80,
+      "repeats_per_entry": 3,
+      "line_recall5_mean": 0.4916666666666667
+    },
+    "pack": {
+      "entries": 80,
+      "repeats_per_entry": 3,
+      "line_recall5_mean": 0.2375
+    }
+  },
+  "strict_top5": {
+    "agent": {
+      "entries": 80,
+      "repeats_per_entry": 3,
+      "line_recall5_mean": 0.6583333333333333
+    },
+    "rag": {
+      "entries": 80,
+      "repeats_per_entry": 3,
+      "line_recall5_mean": 0.4916666666666667
+    },
+    "pack": {
+      "entries": 80,
+      "repeats_per_entry": 3,
+      "line_recall5_mean": 0.2375
+    }
+  },
+  "conclusion": "No effect. The frozen S0 parser already truncates candidate_files to five; every S0 raw and parsed candidate list contains at most five entries, so strict Top-5 LR is identical to the historical S0 LR for all 720 records.",
+  "status": "PASS_ZERO_EFFECT",
+  "candidate_list_source": "raw_text JSON candidate_files before the frozen parser; parsed answer after parse_final_answer()"
+}

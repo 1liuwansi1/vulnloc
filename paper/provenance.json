@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "kind": "engineering_candidate_derived",
+  "not_historical_original": true,
+  "scope": "Candidate provenance generated for the public L1 artifact; it is not the historical raw provenance and must not be cited as the original study record.",
+  "artifact_manifest_sha256": "da9f409bc3b7c4ede0e061b88c1dcad9b729f83cfa5a2137a856f1427c2c8955",
+  "l1_result_files": {
+    "s0": "bd1788d2a9189a49bbc5a44733e1b95b985cb2148beb24d7e566a3b831e71124",
+    "s1": "c0ddd2768947637ef01b05c0a533b27643a0d8b76c343f8f6d86b6bcc1a16376"
+  },
+  "source_relation": "S0 original confirmatory study; S1 supplemental same-known-entry study. Separate reporting, no pooling, no independent-confirmation claim.",
+  "notes": [
+    "Frozen source bytes are preserved; candidate docs are new engineering files.",
+    "Historical raw data, model text and provider wire records are excluded.",
+    "Authors, institution, license, DOI and venue remain pending approval."
+  ]
+}

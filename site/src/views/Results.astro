@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResultsExplorer from '../components/ResultsExplorer';
+import { t, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = (key: Parameters<typeof t>[1]) => t(locale,key);
+---
+<Layout locale={locale} page="results" title={tr('Results')}>
+  <header class="page-hero wrap"><p class="eyebrow">{tr('02 / The evidence')}</p><h1>{tr('A comparison.')}<br /><em>{tr('Not a universal ranking.')}</em></h1><p class="intro">{tr('Explore the two studies separately. Every failed answer remains in the denominator. Uncertainty belongs to paired entry-level contrasts—not to 240 independent samples.')}</p></header>
+  <section class="page-body wrap"><ResultsExplorer locale={locale} client:load /><noscript><p>{tr('Enable JavaScript to switch studies and metrics. The initial S0 numerical tables are available below the chart.')}</p></noscript></section>
+</Layout>

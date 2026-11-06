@@ -1,0 +1,17 @@
+name: c06-repair-formal
+description: Fresh supplemental study after repaired native tools and executable preflight. Never resume the failed parent automatically.
+seed: 20261003
+timeout: 86400
+command:
+- 05_code/venv/bin/python
+- 06_experiments/scripts/c06_repair/runner.py
+- --config
+- 06_experiments/c06_repair/formal_proposal.json
+- --mode
+- run
+- --launch
+- 06_experiments/c06_repair/freezes/f7362b60fc663bc81e9d806e9949340e2d3c0901820efd0d6ad20e6445984bcb.json
+- --preflight
+- 06_experiments/c06_repair/preflight-f7362b60.json
+analysis: 06_experiments/scripts/c06_repair/analysis.py
+tags: [c06-repair, formal, supplemental-known-samples]

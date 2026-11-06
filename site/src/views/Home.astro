@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import data from '../data/verified.json';
+import { t, pathFor, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = (key: Parameters<typeof t>[1]) => t(locale,key);
+const base = pathFor(locale).replace(/\/$/,'');
+---
+<Layout locale={locale} title={tr('Evidence acquisition, measured')}>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-square"></span> {tr('Repository-level vulnerability localization')}</p>
+      <h1>{tr('Finding the flaw')}<br />{tr('starts with')}<br /><em>{tr('finding the evidence.')}</em></h1>
+      <p class="hero-description">{tr('How do context acquisition strategies shape vulnerability localization under limited inference budgets?')}</p>
+      <p class="hero-detail">{tr('A controlled comparison of adaptive exploration, hybrid retrieval, and lexical packing. Two studies. The same known entries. A more nuanced story than “agents win.”')}</p>
+      <div class="actions"><a class="button primary" href={`${base}/results/`}>{tr('Explore the results')} <span>↗</span></a><a class="button secondary" href={`${base}/paper/`}>{tr('Read the paper')} <small>{tr('Draft')}</small></a></div>
+      <div class="hero-links"><a href={`${base}/reproducibility/`}>{tr('Reproduce offline ↗')}</a><a href={`${base}/resources/#code`}>{tr('Code')} <span>{tr('publication pending')}</span></a></div>
+    </div>
+    <div class="evidence-map" aria-label={tr('Conceptual illustration of repository context acquisition, not an experimental trace')} role="img">
+      <div class="map-header mono"><span>{tr('CONTEXT ACQUISITION')}</span><span class="map-live">{tr('READ ONLY')}</span></div>
+      <div class="map-grid"></div>
+      <svg class="map-lines" viewBox="0 0 560 430" fill="none" aria-hidden="true"><path d="M90 150H225V95H410M90 150H225V215H410M90 150V330H410"/><path class="signal" d="M90 150H225V215H410"/><circle cx="225" cy="215" r="5"/></svg>
+      <div class="repo-node mono"><span>⌘</span> {tr('repository')}<span class="node-sub">{tr('immutable source tree')}</span></div>
+      <div class="strategy-node node-agent"><span class="node-index">01</span><div>Agent<small>{tr('Explore → observe → refine')}</small></div><i></i></div>
+      <div class="strategy-node node-rag"><span class="node-index">02</span><div>RAG<small>{tr('Retrieve → fuse → deliver')}</small></div><i></i></div>
+      <div class="strategy-node node-pack"><span class="node-index">03</span><div>Pack<small>{tr('Sort → pack → deliver')}</small></div><i></i></div>
+      <div class="map-bottom mono"><span>{tr('advisory → context → localization')}</span><span>{tr('Conceptual / not a trace')}</span></div>
+    </div>
+  </section>
+  <div class="study-strip wrap"><div><span class="mono">{tr('STUDY DESIGN')}</span><strong>{tr('Same question.')}<br />{tr('Three acquisition strategies.')}</strong></div><div><strong>{data.studies.s0.entries}</strong><span>{tr('known entries per study')}</span></div><div><strong>{data.studies.s0.units}</strong><span>{tr('inference units per study')}</span></div><div><strong>50k</strong><span>{tr('repository-information token ceiling¹')}</span></div></div>
+  <section class="section wrap">
+    <div class="section-heading"><p class="eyebrow">{tr('01 / The research')}</p><h2>{tr('Context is not')}<br />{tr('a neutral choice.')}</h2><p>{tr('Before a model can localize a vulnerability, it must decide what repository information to see. We compare this design choice—and examine where its benefits stop.')}</p></div>
+    <div class="editorial-grid"><article class="lead-observation"><span class="mono">{tr('THE CENTRAL OBSERVATION')}</span><h3>{tr('Adaptive exploration helps.')}<br /><em>{tr('Reliability decides how much.')}</em></h3><p>{tr('Agent outperforms the weak Pack reference in file recall in both studies. Against hybrid RAG, the picture is conditional: the supplemental study does not establish an Agent file-recall advantage.')}</p><a class="text-link" href={`${base}/analysis/`}>{tr('Read the interpretation ↗')}</a></article><div class="observation-list"><article><span>01</span><div><h3>{tr('Separate the studies')}</h3><p>{tr('S0 is confirmatory. S1 uses the same known entries with bundled implementation changes—not independent confirmation or a causal ablation.')}</p></div></article><article><span>02</span><div><h3>{tr('Keep failed outputs visible')}</h3><p>{tr('Invalid or empty answers stay in the denominator with zero scores. Output validity is part of measured performance, not a filter applied afterward.')}</p></div></article><article><span>03</span><div><h3>{tr('Reproduce the narrow claim')}</h3><p>{tr('L1 score aggregation and statistical inference work offline. Full raw-dependent figure regeneration and online collection remain incomplete.')}</p></div></article></div></div>
+  </section>
+  <section class="research-question wrap"><p class="eyebrow">{tr('A research artifact, not a scanner')}</p><h2>{tr('Inspect the methods.')}<br />{tr('Interrogate the results.')}</h2><div class="actions"><a class="button primary" href={`${base}/methodology/`}>{tr('Open method explorer ↗')}</a><a class="text-link" href={`${base}/reproducibility/`}>{tr('Verify the evidence ↗')}</a></div><p class="footnote">{tr('¹ A repository-information ceiling does not equalize cumulative input, compute, latency, or cost. No unverified cost or latency claims are displayed.')}</p></section>
+</Layout>

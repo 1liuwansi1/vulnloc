@@ -1,0 +1,84 @@
+\section{Results}
+\label{sec:results}
+\subsection{RQ1: Localization with the Full Denominator}
+Table~\ref{tab:means} reports S0 and S1 separately. S1 FR@5 is \SOneAgentFR{} for Agent, \SOneRagFR{} for RAG, and \SOnePackFR{} for Pack. The primary Agent--Pack difference is \SOnePrimary{}, with 95\% entry-bootstrap interval \SOnePrimaryCI{} and Monte Carlo $p=1/100001$. RAG--Pack FR@5 differs by 0.3500. Both query-dependent configurations exceed the lexical-prefix reference on this sample.
+\input{tables/revision_means}
+\input{tables/revision_contrasts}
+
+The Agent--RAG file contrast is \SOneAgentRagFR{}, with interval [-0.0771, 0.0271] and $p=q=\SOneAgentRagFRP{}$. It does not meet the frozen secondary criterion. The interval allows an Agent disadvantage of 7.71 percentage points and an advantage of 2.71 points under the entry-resampling assumptions; this result does not establish equivalence. Agent--RAG LR@5 differs by \SOneAgentRagLR{}, with interval [0.0250, 0.1521] and BH $q=\SOneAgentRagLRQ{}$ under the same entry-independence assumption. RAG--Pack LR@5 differs by 0.2438 (Table~\ref{tab:contrasts}).
+
+Table~\ref{tab:cluster-sensitivity} places these contrasts alongside the post hoc repository diagnostics. For Agent--RAG LR@5, the equal-repository mean is 0.0533, and the exact repository sign-flip probability is 0.0781, with exploratory secondary $q=0.1042$. Thus the observed 0.0875 entry-weighted difference remains a sample description, while secondary inferential support is sensitive to the dependence assumptions. RAG--Pack FR@5 also has exploratory repository $q=0.1042$, compared with 0.0059 for RAG--Pack LR@5. These probabilities are separate sensitivities, not replacements for the frozen analysis or proof of general repository-level effects.
+\input{tables/revision_cluster_sensitivity}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/s1_contrasts.pdf}
+\caption{S1 paired mean differences and 95\% entry-bootstrap intervals from the frozen analysis. FR is file coverage; LR is tolerance-based interval recall. Intervals are unadjusted and assume independent entries.}
+\label{fig:contrasts}
+\end{figure}
+
+S0's Agent--Pack FR@5 difference is 0.4188, with interval [0.3333, 0.5062]. Its Agent--RAG file contrast is positive, 0.0583, with $p=q=0.0529$ under S0's secondary procedure. The latter passes S0's frozen $q<0.10$ criterion but not a per-comparison $p<0.05$ threshold. In S1 the point estimate changes sign. These observations accompany the bundled configuration changes; they are not evidence that a particular repair caused the difference.
+
+\subsection{RQ2: Evidence Delivery and Final Output}
+Table~\ref{tab:delivery} separates source acquisition from prediction. Agent delivers code from 48.0 unique paths per unit on average, RAG 51.5, and Pack 51.7. Their mean fractions of target files with any delivered source are 0.9542, 0.6813, and 0.0000. The fractions average each unit's one- or two-file target coverage; they are not pooled counts across three repeats.
+\input{tables/revision_delivery}
+
+Agent's higher delivery coverage coexists with lower aggregate FR@5 than RAG. A hit in a target file can expose irrelevant lines, and a final prediction can omit an acquired target. The present summaries establish this difference between availability and output, without isolating those explanations. Pack achieves FR@5 \SOnePackFR{} despite no target-source delivery. The model still receives the advisory and path list; these and prior knowledge are possible information routes, whose individual contributions are not measured.
+
+\subsection{Annotated Source, Returned Locations, and Prediction Extent}
+The post hoc joint analysis moves from any code in a target file to overlap with its annotated interval. Mean annotation-source delivery is 0.9125 for Agent, 0.3813 for RAG, and zero for Pack, retaining all outcomes. Table~\ref{tab:annotation-stages} partitions 480 opportunities per arm. Agent has 279 credited interval hits, all accompanied by delivered annotation source. It also leaves 108 annotations uncovered in schema-valid outputs with such source available. RAG has 141 hits with annotation source and 96 without it; its uncovered annotations in schema-valid outputs divide into 102 without target-file code, 99 with only other lines from that file, and 42 with annotation-source delivery. Pack's 120 hits all occur without target-file source. Source and hit co-occurrence is an availability diagnostic; reasons and security traces are not adjudicated.
+\input{tables/revision_annotation_stages}
+\input{tables/revision_interval_detail}
+
+\input{tables/revision_role_width}
+\input{tables/revision_location_validity}
+
+Table~\ref{tab:role-width} clarifies the coverage categories. Of Agent's 108 uncovered annotations with source available, 80 are EP and 28 CO; 78 already have the correct file among the predictions. Two purposively selected counterexamples illustrate why this is not automatically task failure. For \texttt{entry-00227}, repeat 1, Agent returns lines 121--146 of \path{src/agents/tools/sessions-spawn-tool.ts}, covering the CO at line 129 but not the EP factory declaration at line 60. For \texttt{entry-00229}, repeat 1, its lines 253--267 of \path{src/agents/apply-patch.ts} cover the sandbox operation at CO line 258, not the EP factory at line 80. These cases demonstrate role-specific annotation omissions while a critical operation is returned; they do not validate every rationale or estimate their prevalence.
+
+Of RAG's 96 hits without corresponding annotation source, 45 have other source from the target file and 51 have none. Only five retain a hit under the 64-line rule, all at CO; the other 91 depend on broader returned intervals. Pack retains ten of its 120 such hits. Thus hits without annotated source predominantly describe broad overlap credit in these records, rather than demonstrated precise localization without source.
+
+Table~\ref{tab:location-validity} separates schema acceptance from repository-valid locations. RAG's 774 returned intervals contain 23 nonexistent paths and 52 intervals ending beyond the file; Pack's 763 contain 381 and 129 respectively. Agent's 635 contain no nonexistent paths and two overruns. At least one such issue occurs in 56 RAG, 180 Pack, and two Agent outcomes. For example, Pack predicts lines 1--250 of \path{packages/server/src/routes/chatflows/index.ts} in \texttt{entry-00477}, whose file contains 43 lines. After removing absent paths and clipping to file lengths, mean within-file union extents are 88.2, 228.8, and 261.5 lines per outcome for Agent, RAG, and Pack. These are descriptive location checks, not replacements for the frozen scores.
+
+
+Prediction extents help interpret those hits. Across returned top-five intervals, median widths are 22 lines for Agent, 38 for RAG, and 200 for Pack; the corresponding 90th percentiles are 75, 220, and 300. Mean within-file union extents per scheduled outcome are 88.4, 264.9, and 629.8 lines, including zero for failures. These are model-reported numeric extents, including nonexistent paths and out-of-bounds lines; they do not measure readable source or analyst effort. Agent's EP and CO recalls are 0.4083 and 0.7542, versus RAG's 0.3750 and 0.6125: the larger role-specific difference is at CO.
+
+Width-limited LR@5$_{\leq64}$ is 0.5042 for Agent, 0.2729 for RAG, and 0.0208 for Pack. Relative to ordinary LR@5, excluding broad intervals reduces Agent's score by 0.0771, RAG's by 0.2208, and Pack's by 0.2292. The difference between the line measures is consequential, especially for RAG and Pack. Agent's higher width-limited point estimate remains descriptive; no additional significance test was registered.
+
+S1 retains 31 Agent output failures: 22 final DSML tool-call texts and nine empty final text fields. The nine empty fields arise from completed assistant messages containing thinking but no text, rather than absence of any assistant message. RAG and Pack have no schema-level output failures; location-validity issues are counted separately. All 31 Agent failures contribute zeros to the reported means.
+
+A descriptive paired decomposition retains the denominator of 240: Agent's 209 valid-output units contribute $+0.0521$ to Agent--RAG FR@5, while its 31 invalid-output units contribute $-0.0771$, summing to $-0.0250$. For LR@5, the contributions are $+0.1229$ and $-0.0354$, summing to $+0.0875$. These are contributions to the observed contrast, not subset performance estimates or a forecast for a repaired Agent.
+
+The native events locate an operational boundary (Table~\ref{tab:completion}). Active tools close in 53 Agent units: 36 reach 40 accepted bridge actions and 17 exhaust the information budget. Those units include 22 valid answers and all 31 failures; the other 187 units return valid answers. All 22 DSML failures receive an explicit final-JSON formatting correction and remain invalid. The nine empty outputs receive no correction. Only one failed unit receives the bridge's fixed budget-exhausted text.
+\input{tables/revision_completion}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/s1_delivery_output.pdf}
+\caption{S1 mean target-file source coverage, FR@5, and schema-valid answer fractions across all 240 outcomes per configuration. Schema acceptance does not certify path existence, line bounds, or location correctness.}
+\label{fig:delivery-output}
+\end{figure}
+
+Reviewing all saved native completion events finds no earlier usable final localization JSON overwritten in the 31 failures. Their final texts are also unrecoverable by S0's permissive parser. These observations support retaining the output failures; they do not establish that the shutdown behavior alone caused them.
+
+\subsection{RQ3: Resources and Online Time}
+Table~\ref{tab:resources} includes all 240 effective outcomes per arm, including failures. Agent's mean ledger count is 31,376 tokens, compared with approximately 50,000 for RAG and Pack. Its cumulative provider input averages 572,748 tokens, against 53,637 for RAG and 54,194 for Pack. Thus Agent uses fewer newly acquired ledger tokens but \SOneInputRatio{} times Pack's provider input. The shared acquisition ceiling does not equalize model work.
+\input{tables/revision_resources}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/s1_input.pdf}
+\caption{S1 descriptive means for newly delivered ledger information $A$ and cumulative provider input $B$. Their tokenizer and scope differ; the plot does not compare interchangeable budgets.}
+\label{fig:input}
+\end{figure}
+
+Effective-outcome fees total USD \SOneFee{}. Including reported superseded attempts yields a known subtotal of USD \SOneAllFee{}, plus two historical requests whose charges remain unknown. Development calls, local compute, and index preparation are outside this subtotal. Fees are usage reports rather than independently reconciled supplier invoices.
+
+Mean recorded unit times are 107.9 seconds for Agent, 58.2 for RAG, and 52.9 for Pack; medians are 102.8, 52.9, and 47.2 seconds. These describe the measured execution window and observed service conditions. Offline indexing is a separate investment, and initial validation/loading outside the window prevents interpreting these values as full end-to-end deployment latency.
+
+\subsection{Sample Composition Sensitivity}
+Removing any one repository leaves a positive S1 Agent--Pack aggregate contrast, ranging from \SOneLocoMin{} to \SOneLocoMax{}. The equal-repository mean is \SOneRepoEqual{}, compared with the entry-weighted \SOnePrimary{}. The frozen repository-resampling interval is [0.1500, 0.4363]. Per-repository contrasts include negatives for WeKnora and Airflow and zeros for several projects (Appendix~B). These small groups and unequal weights limit precision and generality despite a positive overall contrast. Leave-out stability does not validate the entry-independence assumption.
+
+Table~\ref{tab:hint-subgroups} describes all S1 outcomes within the 29 description-hint and 51 description-no-match entries. Each arm has 87 and 153 outcomes respectively; Agent's four and 27 failures remain scored zero. File recall is higher in the description-hint stratum for every configuration. Pack's means are 0.7241 and 0.2516, despite no target-source delivery in either stratum. These strata differ in task and repository composition, and the latter still includes 35 titles matching target basenames. Their score difference describes the frozen description flags rather than the effect of input hints.
+\input{tables/revision_hint_subgroups}
+
+For an input-provenance example, \texttt{entry-00383} is the first evaluated entry in the frozen manifest. Its dataset title ends in \texttt{request-policy.ts}, matching target \path{src/browser/request-policy.ts}; the original title of \href{https://github.com/advisories/GHSA-xp9r-prpg-373r}{GHSA-XP9R-PRPG-373R} has no filename suffix. Its truncated description is flagged \texttt{NO\_PATH\_HINT}. This title reached all three configurations, illustrating why the description-only label cannot identify a hint-free task. Selection follows manifest order rather than scores.

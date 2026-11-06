@@ -1,0 +1,120 @@
+{
+  "study": "s1",
+  "entries": 80,
+  "units": 720,
+  "arms": {
+    "agent": {
+      "file_recall5": 0.7479166666666667,
+      "line_recall5": 0.58125,
+      "failures": 31,
+      "units": 240
+    },
+    "rag": {
+      "file_recall5": 0.7729166666666667,
+      "line_recall5": 0.49375,
+      "failures": 0,
+      "units": 240
+    },
+    "pack": {
+      "file_recall5": 0.4229166666666667,
+      "line_recall5": 0.25,
+      "failures": 0,
+      "units": 240
+    }
+  },
+  "primary": {
+    "n_entries": 80,
+    "difference": 0.325,
+    "entry_bootstrap_ci95": [
+      0.2270833333333333,
+      0.4229166666666666
+    ],
+    "mc_sign_flip_p": 9.99990000099999e-06,
+    "mc_draws": 100000,
+    "exceedances": 0,
+    "note": "Entry resampling assumes independent entries; repository dependence remains a limitation."
+  },
+  "secondary": {
+    "agent-rag-fr": {
+      "n_entries": 80,
+      "difference": -0.024999999999999994,
+      "entry_bootstrap_ci95": [
+        -0.07708333333333332,
+        0.027083333333333338
+      ],
+      "mc_sign_flip_p": 0.3970460295397046,
+      "mc_draws": 100000,
+      "exceedances": 39704,
+      "note": "Entry resampling assumes independent entries; repository dependence remains a limitation.",
+      "bh_q_unrounded": 0.3970460295397046
+    },
+    "rag-pack-fr": {
+      "n_entries": 80,
+      "difference": 0.35,
+      "entry_bootstrap_ci95": [
+        0.2583333333333333,
+        0.4395833333333334
+      ],
+      "mc_sign_flip_p": 9.99990000099999e-06,
+      "mc_draws": 100000,
+      "exceedances": 0,
+      "note": "Entry resampling assumes independent entries; repository dependence remains a limitation.",
+      "bh_q_unrounded": 1.999980000199998e-05
+    },
+    "agent-rag-lr": {
+      "n_entries": 80,
+      "difference": 0.0875,
+      "entry_bootstrap_ci95": [
+        0.025,
+        0.15208333333333335
+      ],
+      "mc_sign_flip_p": 0.01115988840111599,
+      "mc_draws": 100000,
+      "exceedances": 1115,
+      "note": "Entry resampling assumes independent entries; repository dependence remains a limitation.",
+      "bh_q_unrounded": 0.014879851201487986
+    },
+    "rag-pack-lr": {
+      "n_entries": 80,
+      "difference": 0.24375,
+      "entry_bootstrap_ci95": [
+        0.16041666666666665,
+        0.3270833333333333
+      ],
+      "mc_sign_flip_p": 9.99990000099999e-06,
+      "mc_draws": 100000,
+      "exceedances": 0,
+      "note": "Entry resampling assumes independent entries; repository dependence remains a limitation.",
+      "bh_q_unrounded": 1.999980000199998e-05
+    }
+  },
+  "seed": 20260928,
+  "bootstrap_draws": 10000,
+  "permutation_draws": 100000,
+  "official_and_paper_checks": "PASS",
+  "scope": "L1 score aggregation; not raw answer re-scoring or model collection",
+  "provenance": {
+    "scope": "engineering-derived L1 provenance for the public candidate; not a historical raw provenance record",
+    "inputs_sha256": {
+      "data/processed/entries.json": "9116e49b63d9b1257228eda1cb06ac14d875f2a7728ba9665e3334aa1286f477",
+      "data/processed/s1/metrics.json": "97ca4660972cef8fb548e397ac662d5795f2e2f859ad1abcd571d636de8eec1b",
+      "data/processed/s1/official.json": "8186d7497f31410aebc311ddfbfdda5812fe092769d0d46e0430be366e63684f",
+      "data/processed/s1/official_per_record.json": "85a6f249b80fad076885f62763c3355b72c4faa7be85c5555a4391e8d5001410",
+      "data/processed/s1/schedule.json": "069d9b80b5c789d79b03b788ee4cd60ed3f51c38c27dd811f82d4d875ba80926",
+      "data/processed/s1/source_provenance.json": "ada1062a216f10e80a81ed5585e00f2f5244404d97e80309fead3b2cd301442c",
+      "docs/METHODS.md": "d6519fe49850dab8b3f4542d5e19a4c9ed15ccd1b29477a16d2032b4348ee4be",
+      "experiments/s1_frozen/code/analysis.py": "50b5324ddd2c6cbab5f407419ed752fddc5f043f5492b50182f0e182a379b544",
+      "paper/tables/revision_contrasts.tex": "9054f98868cc42801dbd80fd35a1866c6fbb49c5e0e673cc5080402df2b9f0b9",
+      "paper/tables/revision_means.tex": "4d9263a6cddb7857f9d9f1e3c33bca7e0d40a5c3fd7cd0fdbea4021082a03729",
+      "paper/tables/revision_numbers.tex": "86b91429df7c0fd914d542228372cd037b585a46d05ca84bacb8a5369dee19e7",
+      "requirements.txt": "6d8010d6b7c5291f00df55a9b8c4a25de7d8c88d5b6bd36ddf2bbdc16110cbb7"
+    },
+    "environment": {
+      "python": "3.12.3",
+      "numpy": "2.5.3",
+      "analysis_seed": 20260928,
+      "bootstrap_draws": 10000,
+      "permutation_draws": 100000
+    }
+  }
+}

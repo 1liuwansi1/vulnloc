@@ -1,0 +1,41 @@
+{
+  "s0_normalized": {
+    "experiment_config": true,
+    "sample_manifest": true,
+    "run_schedule": true,
+    "path_hint_annotation": true,
+    "index_manifest": true,
+    "index_manifest_sha256_file": true,
+    "evaluator": true,
+    "common": true,
+    "arms": true,
+    "pi_rpc": true,
+    "runner": true,
+    "rag_index": true,
+    "analysis_entrypoint": true,
+    "stats": true,
+    "retry_policy": true,
+    "statistical_plan": true,
+    "cost_guard": true,
+    "frozen_claim": true
+  },
+  "s1_byte_identical": {
+    "analysis.py": true,
+    "billing.py": true,
+    "core.py": true,
+    "index.py": true,
+    "methods.py": true,
+    "native_bridge.py": true,
+    "native_tools.ts": true,
+    "preflight.py": true,
+    "protocol.py": true,
+    "provider_probe.py": true,
+    "runner.py": true,
+    "source.py": true,
+    "test_invariants.py": true,
+    "test_native.py": true,
+    "test_repair.py": true,
+    "test_transport.py": true,
+    "transport.py": true
+  }
+}

@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+import { t, pathFor, type Locale } from '../i18n';
+interface Props { title: string; description?: string; locale?: Locale; page?: string }
+const { title, locale = 'en', page = '', description = t(locale, 'A research study of context acquisition and output reliability for repository-level vulnerability localization.') } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const links = [['Methodology','methodology'],['Results','results'],['Analysis','analysis'],['Reproduce','reproducibility'],['Paper','paper'],['Resources','resources']] as const;
+const other = locale === 'en' ? 'zh' : 'en';
+const origin = Astro.site?.origin || 'http://localhost:4321';
+---
+<!doctype html>
+<html lang={locale === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#080c12" />
+    <title>{title} — vulnloc</title>
+    <link rel="canonical" href={origin + pathFor(locale, page, base)} />
+    <link rel="alternate" hreflang="en" href={origin + pathFor('en', page, base)} />
+    <link rel="alternate" hreflang="zh-CN" href={origin + pathFor('zh', page, base)} />
+    <link rel="alternate" hreflang="x-default" href={origin + pathFor('en', page, base)} />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080c12'/%3E%3Cpath d='M15 19l17 28 17-28M24 19l8 13 8-13' fill='none' stroke='%2384deeb' stroke-width='4'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#main">{t(locale,'Skip to content')}</a>
+    <header class="site-header">
+      <a class="brand" href={pathFor(locale,'',base)} aria-label={t(locale,'vulnloc home')}><span class="brand-symbol">⌁</span> vulnloc<span class="brand-dot">.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">{t(locale,'Menu')} <span aria-hidden="true">＋</span></button>
+      <nav id="navigation" aria-label={t(locale,'Main navigation')}>
+        {links.map(([label,path]) => <a href={pathFor(locale,path,base)} aria-current={page === path ? 'page' : undefined}>{t(locale,label)}</a>)}
+      </nav>
+      <span class="status"><i></i> {t(locale,'Public research artifact')}</span>
+      <a class="language-switch" href={pathFor(other,page,base)} data-route={pathFor(other,page,base)} data-locale={other} data-base={base} aria-label={t(locale,'Switch language')}><span class:list={{selected:locale==='zh'}}>中文</span><span aria-hidden="true">/</span><span class:list={{selected:locale==='en'}}>EN</span></a>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer wrap">
+      <div><a class="brand" href={pathFor(locale,'',base)}>vulnloc<span class="brand-dot">.</span></a><p>{t(locale,'Evidence before claims.')}</p></div>
+      <div class="footer-meta"><span>{t(locale,'Research artifact · Public release')}</span><span>{t(locale,'Authors / affiliation / venue / DOI: PENDING')}</span><span>{t(locale,'Released as a research artifact under the stated licenses. Not a vulnerability scanning service.')}</span></div>
+      <a class="text-link" href={`${pathFor(locale,'resources',base)}#release`}>{t(locale,'Release status ↗')}</a>
+    </footer>
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      button?.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') !== 'true';
+        button.setAttribute('aria-expanded', String(open));
+        document.querySelector('#navigation')?.classList.toggle('is-open', open);
+      });
+      const switcher = document.querySelector<HTMLAnchorElement>('.language-switch');
+      const base = switcher?.dataset.base || '/vulnloc';
+      if (location.pathname === base + '/') {
+        let preferred = navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+        try { const saved = localStorage.getItem('vulnloc.locale'); if (saved === 'zh' || saved === 'en') preferred = saved; } catch { /* storage unavailable: browser preference, then English */ }
+        location.replace(base + '/' + preferred + '/' + location.search + location.hash);
+      }
+      switcher?.addEventListener('click', () => {
+        const target = switcher.dataset.route!;
+        switcher.href = target + location.search + location.hash;
+        try { localStorage.setItem('vulnloc.locale', switcher.dataset.locale!); sessionStorage.setItem('vulnloc.scroll', JSON.stringify({ path: target, y: scrollY })); } catch { /* navigation still works without storage */ }
+      });
+      try {
+        const saved = JSON.parse(sessionStorage.getItem('vulnloc.scroll') || 'null');
+        if (saved && saved.path === location.pathname && Number.isFinite(saved.y)) {
+          sessionStorage.removeItem('vulnloc.scroll');
+          requestAnimationFrame(() => scrollTo({ top: saved.y, behavior: 'instant' }));
+        }
+      } catch { /* no scroll preference */ }
+    </script>
+  </body>
+</html>

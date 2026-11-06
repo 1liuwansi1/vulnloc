@@ -1,0 +1,10 @@
+---
+// Preserve old P3 bookmarks without a client-side routing requirement.
+import Article from '../views/Article.astro';
+import Results from '../views/Results.astro';
+import Methodology from '../views/Methodology.astro';
+import { articlePages } from '../i18n/content';
+export function getStaticPaths() { return [...articlePages,'results','methodology'].map(page => ({params:{page},props:{page}})); }
+const { page } = Astro.props;
+---
+{page === 'results' ? <Results locale="en" /> : page === 'methodology' ? <Methodology locale="en" /> : <Article locale="en" page={page as 'analysis'|'reproducibility'|'paper'|'resources'} />}

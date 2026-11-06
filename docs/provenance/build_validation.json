@@ -1,0 +1,68 @@
+{
+  "editable_install": {
+    "exit_code": 0,
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-build-isolation",
+      "-e",
+      "."
+    ]
+  },
+  "dependencies": {
+    "exit_code": 0,
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ]
+  },
+  "hashes": {
+    "exit_code": 0,
+    "command": [
+      ".venv/bin/vulnloc",
+      "verify"
+    ]
+  },
+  "statistics": {
+    "exit_code": 0,
+    "command": [
+      ".venv/bin/vulnloc",
+      "reproduce"
+    ]
+  },
+  "tests": {
+    "exit_code": 0,
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ]
+  },
+  "screening": {
+    "exit_code": 0,
+    "command": [
+      ".venv/bin/python",
+      "scripts/scan_candidate.py"
+    ]
+  },
+  "source_preservation": {
+    "files_checked": 388,
+    "changed_files": [],
+    "git_status_unchanged": true,
+    "independent_raw_backup_verified": false
+  },
+  "test_count": 18,
+  "prior_failures": [
+    "venv ensurepip missing; bootstrapped via trusted pip --python",
+    "paper decimal tie initially rejected; display precision test added, full-precision checks unchanged"
+  ],
+  "release_authorized": false
+}

@@ -1,0 +1,26 @@
+---
+import { t, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = (key: Parameters<typeof t>[1]) => t(locale,key);
+const install = `cd /path/to/vulnloc\npython3.12 -m venv .venv\n.venv/bin/python -m pip install -e .`;
+const reproduce = `cd /path/to/vulnloc\n.venv/bin/vulnloc verify\n.venv/bin/vulnloc reproduce\n.venv/bin/vulnloc verify-results`;
+const questions = [
+  ['Can I reproduce the original model answers?', 'No. L1 reaggregates stored scores. L3 online collection is not implemented in the public wrapper, and a future provider cannot guarantee the historical answers.'],
+  ['Why does a build fail after an input changes?', 'The site requires valid hashes and agreement with frozen references and recomputed statistics. Investigate the inconsistency; never substitute placeholder data or silently fall back to old outputs.'],
+  ['Does a single-study run remove the other study?', 'No. It updates only its per-study files. Only the all-studies command generates the complete shared table.'],
+  ['What if Python reports missing ensurepip?', 'Install the operating system’s Python 3.12 venv support using your normal administrator process. See docs/INSTALL.md in the local checkout; do not copy the historical research environment.'],
+] as const;
+---
+<section id="commands"><p class="eyebrow">{tr('Run the artifact')}</p><h2>{tr('No API key.')}<br /><em>{tr('No model calls.')}</em></h2><p>{tr('Validated: Python 3.12 · NumPy 2.5.3 · setuptools 84.2.1. First install dependencies, then run the offline analysis from the checkout root.')}</p>{[install,reproduce].map((command,i) => <div class="command-block"><span class="eyebrow">{tr(i === 0 ? '01 / Install' : '02 / Verify & reproduce')}</span><button class="copy-button" type="button" aria-label={tr(i === 0 ? 'Copy install commands' : 'Copy reproduction commands')} data-success={tr('Copied')} data-error={tr('Select text to copy')}>{tr('Copy')}</button><pre><code>{command}</code></pre><span class="copy-status sr-only" aria-live="polite"></span></div>)}<p>{tr('Expected: S0 and S1 each pass 720 units / 80 entries; the combined table has six study/arm rows. No paper numbers or scientific inputs are overwritten.')}</p><div class="faq"><h3>{tr('Common questions')}</h3>{questions.map(([q,a]) => <details><summary>{tr(q)}</summary><p>{tr(a)}</p></details>)}</div></section>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-button').forEach(button => {
+    button.addEventListener('click', async () => {
+      const text = button.parentElement?.querySelector('code')?.textContent || '';
+      try { await navigator.clipboard.writeText(text); button.textContent = button.dataset.success!; }
+      catch { button.textContent = button.dataset.error!; }
+      const status = button.parentElement?.querySelector('.copy-status');
+      if (status) status.textContent = button.textContent;
+    });
+  });
+</script>

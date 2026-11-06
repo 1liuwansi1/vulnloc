@@ -1,0 +1,43 @@
+\documentclass[conference,10pt,letterpaper]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,booktabs,graphicx,adjustbox,array}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Evidence Acquisition and Output Reliability for Advisory-Guided Vulnerability Localization},pdfkeywords={vulnerability localization, evidence acquisition, output reliability}}
+\input{tables/revision_numbers}
+\title{Evidence Acquisition and Output Reliability for\\Advisory-Guided Vulnerability Localization}
+\author{\IEEEauthorblockN{Authors to be specified}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We compare read-only adaptive exploration, single-round hybrid retrieval, and lexicographic packing for advisory-guided vulnerability localization using DeepSeek V4 Pro and a 50,000-token repository-information ceiling. Two separately reported studies each contain 720 outcomes on the same 80 VulnGym entries from 13 repositories. Inputs include dataset-supplied titles; 47 contain target filenames. In the supplementary study with shared nonblank source eligibility, exploration delivers annotated code for 91.25\% of entry-point and critical-operation opportunities, versus retrieval's 38.13\%, but mean file recall is 0.7479 versus 0.7729. Joint analysis qualifies this contrast: 80 of exploration's 108 uncovered annotations with source available are entry points, although the task does not explicitly request both annotation roles. Retrieval earns 96 interval hits without the corresponding annotated source, but only five remain when predictions are limited to 64 lines. Schema-valid answers also contain nonexistent paths and out-of-bounds intervals. All 31 exploration output failures remain scored zero; their contribution to the file-recall contrast offsets the positive contribution from other paired outcomes. Exploration returns narrower intervals and higher tolerance-based interval recall, with inferential support sensitive to repository dependence, while consuming 10.57 times packing's cumulative provider input. The results distinguish source availability, annotation coverage, interval extent, and output validity within these configurations. They motivate reporting these dimensions together when evaluating title-assisted localization.
+\end{abstract}
+\begin{IEEEkeywords}
+vulnerability localization, repository context, coding agents, retrieval-augmented generation, empirical evaluation
+\end{IEEEkeywords}
+\input{sections/01_introduction}
+\input{sections/02_background_related_work}
+\input{sections/03_methodology}
+\input{sections/04_experimental_setup}
+\input{sections/05_results}
+\input{sections/06_analysis_discussion}
+\input{sections/07_threats_to_validity}
+\input{sections/08_conclusion}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\appendices
+\section{Study Identity and Reproduction}
+The public-candidate guide, \path{paper/ARTIFACT_GUIDE.md}, supplies the offline L1 commands included with this candidate. Its candidate index, \path{paper/artifact_manifest.json}, binds only the files distributed in this candidate; the historical 74-repository identity index, raw event records, fee journals, and recovery ancestry are not included in this candidate. The short study identifiers used throughout this paper map to:\\
+\textbf{S0:} \path{c06-confirmatory-20261001T141449Z-4dad}\\
+\textbf{S1:} \path{c06-recovery-v3-formal-20261005T142520Z-56b7}.
+
+The raw implementation archives are authoritative for executed scientific code. Presentation and post hoc sensitivity generators bind their inputs and outputs separately; the claim--evidence map distinguishes external facts, measured observations, and untested interpretations. These materials are currently internal, with no public artifact URL. Stored analyses can be recomputed without model collection. A complete historical SDK dependency archive and provider wire transcript are unavailable, so identical future provider behavior or full historical SDK reconstruction is not certified. Recorded embedding runtime versions and ONNX/tokenizer byte hashes have a narrower, explicit scope in the guide.
+
+S1 imports 439 completed outcomes from its immediate parent, with nested imports of 184 and 125 from earlier runs. These are overlapping ancestry counts, not additional independent observations. Completed model failures are retained. Only three unfinished infrastructure units are explicitly resumed across that chain: \texttt{entry-00117/agent/1}, \texttt{entry-00146/agent/1}, and \texttt{entry-00359/rag/2}. Original interrupted attempts remain archived. All effective-outcome requests have closed usage records; two historical charges remain unresolved rather than assigned zero.
+
+\section{Repository Sensitivity}
+\input{tables/revision_repositories}
+Table~\ref{tab:repos} retains all 13 repository groups, including negative and zero contrasts. The equal-repository mean differs from the entry-weighted primary estimand because repositories contribute unequal numbers of entries. The frozen repository-resampling interval is [0.1500, 0.4363]; it is a sensitivity summary from few imbalanced clusters. Neither that interval nor leave-out stability certifies independent entries.
+
+\end{document}

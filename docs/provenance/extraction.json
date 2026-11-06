@@ -1,0 +1,20 @@
+{
+  "s0": {
+    "run_id": "c06-confirmatory-20261001T141449Z-4dad",
+    "unique_units": 720,
+    "raw_hash_verified": true,
+    "raw_sha256": "e69ac34c522e72228a2f073a18856a9e5dbf8549d152b1c6de4d6becbf51f62b",
+    "scores_match_frozen_scorer": 720,
+    "metrics_origin": "independent_reaudit scores.csv; rowwise raw verification",
+    "official_per_record_verified": false
+  },
+  "s1": {
+    "run_id": "c06-recovery-v3-formal-20261005T142520Z-56b7",
+    "unique_units": 720,
+    "raw_hash_verified": true,
+    "raw_sha256": "a132d67a80481e7804cad5ecae75c1f34cd0238040b1775bab53908c34e70c04",
+    "scores_match_frozen_scorer": 720,
+    "metrics_origin": "independent_reaudit scores.csv; rowwise raw verification",
+    "official_per_record_verified": true
+  }
+}

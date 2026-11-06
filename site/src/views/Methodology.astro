@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MethodExplorer from '../components/MethodExplorer';
+import { t, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = (key: Parameters<typeof t>[1]) => t(locale,key);
+---
+<Layout locale={locale} page="methodology" title={tr('Methodology')}>
+  <header class="page-hero wrap"><p class="eyebrow">{tr('01 / Context acquisition')}</p><h1>{tr('One task.')}<br /><em>{tr('Three ways to look.')}</em></h1><p class="intro">{tr('Given an advisory and a pinned repository, acquire evidence and return likely vulnerable file paths and line intervals. No patching, exploitation, or unknown-bug discovery is evaluated.')}</p></header>
+  <section class="page-body wrap"><MethodExplorer locale={locale} client:visible /><div class="editorial-grid"><article><p class="eyebrow">{tr('Evaluation')}</p><h2>{tr('Coverage, not')}<br />{tr('proof of correctness.')}</h2><p>{tr('FR@5 measures annotated file coverage among the top five predictions. LR@5 measures same-file interval overlap with ±5-line tolerance over two annotation opportunities. Neither measures explanation quality, exploitability, or exact line accuracy.')}</p></article><article><p class="eyebrow">{tr('Scope')}</p><h2>{tr('A deliberately')}<br />{tr('bounded comparison.')}</h2><p>{tr('Pack is a weak lexical reference, not a competitive state-of-the-art baseline. Static-guided retrieval is not implemented. A shared repository-information ceiling does not equalize cumulative input, cost, compute, or latency.')}</p><p class="source">{tr('Sources: frozen protocols; docs/METHODS.md; manuscript methodology.')}</p></article></div></section>
+</Layout>

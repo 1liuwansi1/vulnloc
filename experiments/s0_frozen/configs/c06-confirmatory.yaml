@@ -1,0 +1,15 @@
+name: c06-confirmatory
+description: >
+  C-06 confirmatory experiment (D-012, pre-run READY). 80 frozen confirmatory entries x 3 arms
+  (agent/rag/pack) x 3 repeats = 720 runs. Matched model-visible repository-information budget
+  A<=50000. Frozen manifest/schedule/PATH_HINT annotation/evaluator/retry/statistical plan.
+  Cost guard: $43 expected / $60 warning / $75 pause / $90 hard stop.
+seed: 20260928
+timeout: 259200
+command: [05_code/venv/bin/python, -u, 06_experiments/scripts/c06/runner.py, --phase, confirmatory]
+env:
+  C06_PROVIDER: deepseek
+  C06_MODEL: deepseek-v4-pro
+  C06_THINKING: high
+analysis: 06_experiments/scripts/c06/analyze_c06_confirmatory.py
+tags: [c06, confirmatory]

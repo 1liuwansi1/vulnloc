@@ -1,0 +1,16 @@
+{
+  "fingerprint": {
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "model_snapshot": "aa8f8b060edb00e03bfdd08813a2949946c8ba55",
+    "onnx_sha256": "51f1bd0addd6e859e42c2c8021a5e5461385bb676a649f4b269aa445449f2431",
+    "tokenizer_sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "dim": 384,
+    "fastembed": "0.8.1",
+    "onnxruntime": "1.30.0",
+    "numpy": "2.5.3",
+    "embed_trunc_tokens": 400,
+    "execution": "onnxruntime-cpu-default"
+  },
+  "legacy_hash": "bb25ea0fc6d709f3884b5bbb39b4a7d9ceb0a72b538527bd82c3bbc3413a1e97",
+  "source_hash": "8e1aaaa5bb142a06303461e471d4f58d5bae81bfdf64814a5ec12f4af7296603"
+}
