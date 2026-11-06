@@ -69,8 +69,18 @@ jobs:
         working-directory: site
         run: |
           npx playwright install --with-deps chromium
-          npm run preview -- --port 4321
+          npm run preview -- --port 4321 > /tmp/vulnloc-preview.log 2>&1 &
+          preview_pid=$!
+          ready=0
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4321/vulnloc/en/ >/dev/null; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" != 1 ]; then cat /tmp/vulnloc-preview.log; kill "$preview_pid" 2>/dev/null || true; exit 1; fi
           npm run test:browser
+          status=$?
+          kill "$preview_pid" 2>/dev/null || true
+          exit "$status"
       - name: Configure approved Pages hosting
         uses: actions/configure-pages@v5
       - name: Upload only validated static site

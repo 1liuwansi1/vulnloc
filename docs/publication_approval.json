@@ -13,10 +13,10 @@
   "approved_at": "2026-11-06",
   "github_owner": "1liuwansi1",
   "repository": "vulnloc",
-  "candidate_manifest_sha256": "cf72eafecba2b2ca79fd883bd35071f3e66b9d86e5d82900c4cb20366991603c",
+  "candidate_manifest_sha256": "fca7442b23dc0cdf52c326a0353a1db5da986580da423cf993e397140dd0c31b",
   "protected_inputs_sha256": {
     ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
-    ".github/workflows/deploy.yml": "390d3ef3f1e0e3c2178333abac9b98b6cfb3a890054df847ae1891631fe6dce0",
+    ".github/workflows/deploy.yml": "34443a1044bdc1abd208c9bdbd19708df78705aa3ab1b880bf2ab627687b27ab",
     "CITATION.cff": "dbf01879ac4e859f09d4b053e32b4dfccfedd216c24266a5d28dba70333593be",
     "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
     "LICENSE-DATA": "e22bdec6efd2e74313dc2526b6d818e5a023840317c77eb5ec433e58d8136831",
