@@ -1,4 +1,8 @@
-# Bilingual GitHub Pages — prepared, NOT DEPLOYED
+# Bilingual GitHub Pages — deployed
+
+Live: https://1liuwansi1.github.io/vulnloc/  
+English: https://1liuwansi1.github.io/vulnloc/en/  
+中文: https://1liuwansi1.github.io/vulnloc/zh/
 
 The static project base is `/vulnloc/`. English routes are `/en/`, Chinese
 routes `/zh/`; root language preference uses explicit localStorage choice,

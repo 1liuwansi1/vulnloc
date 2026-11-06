@@ -5,6 +5,10 @@ exploration. The site is part of the published research artifact: code is
 Apache-2.0; metrics-only data, manuscript and figures are CC BY 4.0; individual
 authors, affiliation, venue and DOI remain PENDING.
 
+Live: https://1liuwansi1.github.io/vulnloc/  
+English: https://1liuwansi1.github.io/vulnloc/en/  
+中文: https://1liuwansi1.github.io/vulnloc/zh/
+
 ## Local commands (WSL)
 
 The research checkout must already have its Python 3.12 environment installed.
