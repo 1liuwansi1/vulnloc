@@ -219,7 +219,10 @@ class ArtifactTests(unittest.TestCase):
 
 class ScannerTests(unittest.TestCase):
     def _run(self, root):
-        out = (ROOT / '.local' / 'p26-test-scan.json') if root == ROOT else root / 'scan.json'
+        if root == ROOT:
+            out = Path(tempfile.mkdtemp(prefix='vulnloc-scan-')) / 'scan.json'
+        else:
+            out = root / 'scan.json'
         out.parent.mkdir(parents=True, exist_ok=True)
         proc = subprocess.run(
             [sys.executable, str(ROOT / 'scripts/scan_candidate.py'), '--root', str(root), '--output', str(out)],
