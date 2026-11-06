@@ -42,7 +42,9 @@ test('language switch retains page, study, metric, hash and preference',async({p
   await page.goto('/vulnloc/');
   await expect(page).toHaveURL(/\/zh\/$/);
   await page.goto('/vulnloc/zh/methodology/');
+  await expect(page.locator('[data-hydrated="true"]').first()).toBeVisible();
   await page.getByRole('button',{name:'RAG',exact:true}).click();
+  await expect(page).toHaveURL(/\?method=RAG/);
   await page.locator('.language-switch').click();
   await expect(page).toHaveURL(/\/en\/methodology\/\?method=RAG/);
   await expect(page.getByText('RAG: Single-round hybrid retrieval')).toBeVisible();
